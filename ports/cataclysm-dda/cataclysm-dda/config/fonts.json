@@ -1,5 +1,6 @@
 {
-  "typeface": [ "data/font/Terminus.ttf", "data/font/unifont.ttf" ],
-  "map_typeface": [ "data/font/Terminus.ttf", "data/font/unifont.ttf" ],
-  "overmap_typeface": [ "data/font/Terminus.ttf", "data/font/unifont.ttf" ]
+  "typeface": [ "data/font/FiraCode-Light.ttf", "data/font/unifont.ttf" ],
+  "gui_typeface": [ "data/font/FiraCode-Light.ttf", "data/font/unifont.ttf" ],
+  "map_typeface": [ "data/font/FiraCode-Light.ttf", "data/font/unifont.ttf" ],
+  "overmap_typeface": [ "data/font/FiraCode-Light.ttf", "data/font/unifont.ttf" ]
 }

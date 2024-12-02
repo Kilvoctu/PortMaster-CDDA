@@ -10,6 +10,8 @@
     ],
     "arm_block_with_bio_armor_arms": true,
     "leg_block_with_bio_armor_legs": true,
+    "arm_block": 2,
+    "leg_block": 3,
     "static_buffs": [
       {
         "id": "buff_biojutsu_static",
@@ -65,7 +67,7 @@
       "tec_biojutsu_takedown",
       "tec_biojutsu_wide"
     ],
-    "weapon_category": [ "BIONIC_WEAPONRY", "CLAWS" ]
+    "weapon_category": [ "BIONIC_WEAPONRY" ]
   },
   {
     "type": "martial_art",
@@ -368,8 +370,17 @@
     "unarmed_allowed": true,
     "weighting": 2,
     "disarms": true,
+    "tech_effects": [
+      {
+        "id": "disarmed",
+        "chance": 100,
+        "duration": 400,
+        "on_damage": true,
+        "message": "The weapon of %s has been forced out ot their hands!"
+      }
+    ],
     "stun_dur": 1,
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_grasp" ]
   },
   {
     "type": "technique",
@@ -378,7 +389,7 @@
     "messages": [ "You make an efficient strike against %s!", "<npcname> makes an efficient strike against %s!" ],
     "melee_allowed": true,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.8 } ],
-    "attack_vectors": [ "WEAPON" ]
+    "attack_vectors": [ "vector_null" ]
   },
   {
     "type": "technique",
@@ -386,10 +397,9 @@
     "name": "Measured Strike (unarmed)",
     "messages": [ "You make an efficient strike against %s!", "<npcname> makes an efficient strike against %s!" ],
     "unarmed_allowed": true,
-    "unarmed_weapons_allowed": false,
     "crit_ok": true,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.8 } ],
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_punch" ]
   },
   {
     "type": "technique",
@@ -405,7 +415,7 @@
       { "stat": "damage", "type": "stab", "scale": 1.5 }
     ],
     "stun_dur": 1,
-    "attack_vectors": [ "WEAPON" ]
+    "attack_vectors": [ "vector_null" ]
   },
   {
     "type": "technique",
@@ -414,13 +424,12 @@
     "messages": [ "You kick and slam %s to the ground!", "<npcname> kicks and slams %s to the ground!" ],
     "skill_requirements": [ { "name": "unarmed", "level": 2 } ],
     "unarmed_allowed": true,
-    "unarmed_weapons_allowed": false,
     "weighting": 2,
     "crit_ok": true,
     "condition": { "not": { "npc_has_effect": "downed" } },
     "condition_desc": "* Only works on a <info>non-downed</info> target",
     "down_dur": 2,
-    "attack_vectors": [ "FOOT" ]
+    "attack_vectors": [ "vector_foot_toes" ]
   },
   {
     "type": "technique",
@@ -433,7 +442,7 @@
     "weighting": 2,
     "crit_tec": true,
     "aoe": "wide",
-    "attack_vectors": [ "WEAPON" ]
+    "attack_vectors": [ "vector_null" ]
   },
   {
     "type": "technique",
@@ -447,7 +456,7 @@
       { "stat": "damage", "type": "cut", "scale": 0.66 },
       { "stat": "damage", "type": "stab", "scale": 0.66 }
     ],
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_punch" ]
   },
   {
     "type": "technique",
@@ -458,13 +467,16 @@
     "unarmed_allowed": true,
     "crit_ok": true,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.2 } ],
-    "attack_vectors": [ "FOOT" ]
+    "attack_vectors": [ "vector_foot_toes" ]
   },
   {
     "type": "technique",
     "id": "tec_lizard_break",
     "name": "Grab Break",
-    "messages": [ "The %s tries to grab you, but you outmaneuver it!", "The %s tries to grab <npcname>, but they outmaneuver it!" ],
+    "messages": [
+      "You were almost grabbed by %s, but you outmaneuver it!",
+      "<npcname> was almost grabbed by %s, but they outmaneuver it!"
+    ],
     "skill_requirements": [ { "name": "unarmed", "level": 3 } ],
     "unarmed_allowed": true,
     "melee_allowed": true,
@@ -484,7 +496,7 @@
     "knockback_dist": 1,
     "knockback_spread": 1,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 2.5 } ],
-    "attack_vectors": [ "TORSO" ]
+    "attack_vectors": [ "vector_shoulder" ]
   },
   {
     "type": "technique",
@@ -509,7 +521,7 @@
       { "stat": "damage", "type": "cut", "scale": 0.66 },
       { "stat": "damage", "type": "stab", "scale": 0.66 }
     ],
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_wrist" ]
   },
   {
     "type": "technique",
@@ -521,7 +533,7 @@
     "crit_tec": true,
     "stun_dur": 2,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.25 } ],
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_punch" ]
   },
   {
     "type": "technique",
@@ -534,7 +546,7 @@
     "condition_desc": "Requires a stunned target",
     "weighting": 2,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.5 } ],
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_punch" ]
   },
   {
     "type": "technique",
@@ -548,7 +560,7 @@
     "weighting": 2,
     "crit_tec": true,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 2.0 } ],
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_punch" ]
   },
   {
     "type": "technique",
@@ -557,7 +569,7 @@
     "messages": [ "You roundhouse kick %s!", "<npcname> roundhouse kicks %s!" ],
     "unarmed_allowed": true,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.2 } ],
-    "attack_vectors": [ "FOOT" ]
+    "attack_vectors": [ "vector_foot_heel" ]
   },
   {
     "type": "technique",
@@ -570,7 +582,7 @@
     "knockback_dist": 3,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 2.0 } ],
     "messages": [ "Your Stinger Kick sends %s flying!", "<npcname>'s Stinger Kick sends %s flying!" ],
-    "attack_vectors": [ "FOOT" ]
+    "attack_vectors": [ "vector_foot_sole" ]
   },
   {
     "type": "technique",
@@ -582,7 +594,7 @@
     "required_buffs_all": [ "buff_scorpion_onmove" ],
     "stun_dur": 1,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.25 } ],
-    "attack_vectors": [ "FOOT" ]
+    "attack_vectors": [ "vector_foot_toes" ]
   },
   {
     "type": "technique",
@@ -593,7 +605,7 @@
     "crit_ok": true,
     "unarmed_allowed": true,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.25 } ],
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_punch" ]
   },
   {
     "type": "technique",
@@ -605,7 +617,7 @@
     "crit_tec": true,
     "stun_dur": 1,
     "mult_bonuses": [ { "stat": "damage", "type": "bash", "scale": 1.4 } ],
-    "attack_vectors": [ "ARM" ]
+    "attack_vectors": [ "vector_arm" ]
   },
   {
     "type": "technique",
@@ -620,13 +632,13 @@
     "condition_desc": "* Only works on a <info>non-downed</info> target",
     "down_dur": 2,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ],
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_grasp" ]
   },
   {
     "type": "technique",
     "id": "tec_centipede_break",
     "name": "Grab Break",
-    "messages": [ "The %s tries to grab you, but you skitter free!", "The %s tries to grab <npcname>, but they skitter free!" ],
+    "messages": [ "You were almost grabbed by %s, but you skitter free!", "<npcname> was almost grabbed by %s, but they skitter free!" ],
     "skill_requirements": [ { "name": "unarmed", "level": 3 } ],
     "unarmed_allowed": true,
     "defensive": true,
@@ -644,7 +656,7 @@
       { "stat": "damage", "type": "cut", "scale": 0.66 },
       { "stat": "damage", "type": "stab", "scale": 0.66 }
     ],
-    "attack_vectors": [ "HAND" ]
+    "attack_vectors": [ "vector_punch" ]
   },
   {
     "type": "technique",
@@ -658,7 +670,7 @@
     "condition_desc": "* Only works on a <info>non-downed</info> target",
     "down_dur": 1,
     "mult_bonuses": [ { "stat": "movecost", "scale": 0.5 } ],
-    "attack_vectors": [ "PALM" ]
+    "attack_vectors": [ "vector_palm" ]
   },
   {
     "type": "technique",
@@ -668,6 +680,15 @@
     "skill_requirements": [ { "name": "unarmed", "level": 4 } ],
     "unarmed_allowed": true,
     "disarms": true,
-    "attack_vectors": [ "HAND" ]
+    "tech_effects": [
+      {
+        "id": "disarmed",
+        "chance": 100,
+        "duration": 400,
+        "on_damage": true,
+        "message": "The weapon of %s has been forced out ot their hands!"
+      }
+    ],
+    "attack_vectors": [ "vector_grasp" ]
   }
 ]

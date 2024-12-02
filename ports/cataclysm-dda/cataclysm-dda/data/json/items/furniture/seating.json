@@ -7,13 +7,14 @@
     "symbol": "#",
     "color": "brown",
     "flags": [ "NO_SALVAGE", "FRAGILE_MELEE" ],
-    "price": 3000,
-    "price_postapoc": 250,
+    "price": "30 USD",
+    "price_postapoc": "2 USD 50 cent",
     "longest_side": "95 cm",
     "volume": "30 L",
     "weight": "12 kg",
     "material": [ "wood" ],
-    "to_hit": -3
+    "to_hit": { "grip": "none", "length": "long", "surface": "any", "balance": "clumsy" },
+    "melee_damage": { "bash": 6 }
   },
   {
     "type": "GENERIC",
@@ -23,13 +24,14 @@
     "symbol": "H",
     "color": "green",
     "flags": [ "NO_SALVAGE" ],
-    "price": 25000,
-    "price_postapoc": 1500,
+    "price": "250 USD",
+    "price_postapoc": "15 USD",
     "longest_side": "110 cm",
     "volume": "570 L",
     "weight": "27 kg",
-    "material": [ { "type": "cotton", "portion": 75 }, { "type": "wood", "portion": 25 } ],
-    "to_hit": -4
+    "material": [ { "type": "cotton", "portion": 3 }, { "type": "wood", "portion": 1 } ],
+    "to_hit": { "grip": "bad", "length": "long", "surface": "any", "balance": "clumsy" },
+    "melee_damage": { "bash": 6 }
   },
   {
     "type": "GENERIC",
@@ -39,13 +41,14 @@
     "symbol": "#",
     "color": "brown",
     "flags": [ "NO_SALVAGE", "FRAGILE_MELEE" ],
-    "price": 3000,
-    "price_postapoc": 250,
+    "price": "30 USD",
+    "price_postapoc": "2 USD 50 cent",
     "longest_side": "45 cm",
     "volume": "17 L",
     "weight": "3 kg",
     "material": [ "wood" ],
-    "to_hit": -2
+    "to_hit": { "grip": "none", "length": "short", "surface": "any", "balance": "clumsy" },
+    "melee_damage": { "bash": 6 }
   },
   {
     "type": "GENERIC",
@@ -55,13 +58,14 @@
     "symbol": "#",
     "color": "brown",
     "flags": [ "NO_SALVAGE" ],
-    "price": 0,
-    "price_postapoc": 1,
+    "price": "0 cent",
+    "price_postapoc": "1 cent",
     "longest_side": "50 cm",
     "volume": "20 L",
     "weight": "11 kg",
     "material": [ "wood" ],
-    "to_hit": -2
+    "to_hit": { "grip": "bad", "length": "short", "surface": "any", "balance": "clumsy" },
+    "melee_damage": { "bash": 6 }
   },
   {
     "type": "GENERIC",
@@ -70,13 +74,15 @@
     "description": "A bar stool with a leather seat on a steel support.  Not practical for sleeping at all but it does feel nicer than sitting on the ground.",
     "symbol": "p",
     "color": "light_gray",
-    "price": 5000,
-    "price_postapoc": 500,
+    "price": "50 USD",
+    "price_postapoc": "5 USD",
     "longest_side": "80 cm",
     "volume": "30 L",
     "weight": "7500 g",
-    "material": [ { "type": "steel", "portion": 975 }, { "type": "leather", "portion": 25 } ],
-    "to_hit": -2
+    "material": [ { "type": "steel", "portion": 39 }, { "type": "leather", "portion": 1 } ],
+    "flags": [ "NO_SALVAGE" ],
+    "to_hit": { "grip": "none", "length": "short", "surface": "any", "balance": "clumsy" },
+    "melee_damage": { "bash": 6 }
   },
   {
     "type": "GENERIC",
@@ -86,13 +92,14 @@
     "symbol": "#",
     "color": "brown",
     "flags": [ "FRAGILE_MELEE" ],
-    "price": 3000,
-    "price_postapoc": 500,
+    "price": "30 USD",
+    "price_postapoc": "5 USD",
     "longest_side": "80 cm",
     "volume": "30 L",
     "weight": "5 kg",
-    "material": [ { "type": "wood", "portion": 85 }, { "type": "steel", "portion": 15 } ],
-    "to_hit": -3
+    "material": [ { "type": "wood", "portion": 17 }, { "type": "steel", "portion": 3 } ],
+    "to_hit": { "grip": "none", "length": "short", "surface": "any", "balance": "clumsy" },
+    "melee_damage": { "bash": 6 }
   },
   {
     "type": "GENERIC",

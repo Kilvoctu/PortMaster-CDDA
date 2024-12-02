@@ -1,34 +1,33 @@
-back = i # inventory
-guide = i # inventory
-start = tab # horizotal menu navigation, attack
+guide = i # Help screen, ignore errors if occurs
+
+back = p # Time passing functions
+start = m # Map, player info, message log
+
 a = enter
 b = esc
-x = g # pickup item
-y = 5 # wait
+x = e # examine, pick up, insert
+y = d # inventory, drop, unload
 
-a_hk = w # preview, confirm route / wield item
-a_hk = add_shift
-b_hk = 1 # toggle safe mode
-b_hk = add_shift
-x_hk = g 
-x_hk = add_shift # grab item
-y_hk = 4 # sleep
-y_hk = add_shift # sleep
+a_hk = & # flexible key
+b_hk = r # reset filter
+x_hk = / # filter list
+y_hk = * # another flexible key
 
-l1 = t # throw item
-l2 = s # smash
-l3 = ; # look around
-r1 = f # fire item
-r2 = r # reaload item
-r3 = m # map
+l1 = leftshift # modifier key 1
+l2 = leftctrl # modifier key 2
+l3 = l # look, list items, butcher
+r1 = f # fire, reload, throw item
+r2 = g # use wielded item, wield, toggle item attack mode
+r3 = r # smash, grab, haul
 
-l1_hk = d # drop items
-r1_hk = f # toggle attack mode of wielded item
+r1_hk = / # keybinds screen
 r1_hk = add_shift
-l2_hk = p # view/activate bionics
-r2_hk = [ # view/activate mutations
+l1_hk = - # minus
+l2_hk = = # plus
+l2_hk = add_shift
+r2_hk = = # equals
 
-up = up
+up = up 
 up = repeat
 down = down
 down = repeat
@@ -37,20 +36,16 @@ left = repeat
 right = right
 right = repeat
 
-left_analog_up = up
-left_analog_up = repeat
-left_analog_down = down
-left_analog_down = repeat
-left_analog_left = left
-left_analog_left = repeat
-left_analog_right = right
-left_analog_right = repeat
+left_analog_up = [ # ascend stairs, mutations
+left_analog_down = ] # descend stairs, bionics
+left_analog_left = u # close door, safe mode, zones manager
+left_analog_right = v # peek, sort armor, zone activities
 
-right_analog_up = z # zoom-in
-right_analog_down = z
-right_analog_down = add_shift # zoom-out
-right_analog_left = >
-right_analog_left = add_shift # desend stairs
-right_analog_right = <
-right_analog_right = add_shift # ascend stairs
+right_analog_up = w # zoom in, use item, adv. inventory
+right_analog_down = x # zoom out, consume item, consruction
+right_analog_left = y # tab left, movement mode, take off item, disassemble
+right_analog_right = z # tab right, attack, wear item, craft item
+
+deadzone_mode = axial
+deadzone = 32000 # high because stick usage isn't analog in game
 
