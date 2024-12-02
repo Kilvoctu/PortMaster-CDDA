@@ -8,10 +8,12 @@ b = esc
 x = e # examine, pick up, insert
 y = d # inventory, drop, unload
 
-a_hk = & # flexible key
+a_hk = 7 # flexible key
+y_hk = add_shift
 b_hk = r # reset filter
 x_hk = / # filter list
-y_hk = * # another flexible key
+y_hk = 8 # another flexible key
+y_hk = add_shift
 
 l1 = leftshift # modifier key 1
 l2 = leftctrl # modifier key 2
