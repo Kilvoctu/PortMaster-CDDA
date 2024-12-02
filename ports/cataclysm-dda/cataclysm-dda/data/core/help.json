@@ -2,256 +2,278 @@
   {
     "type": "help",
     "order": 0,
-    "name": "Start+Down | Text Input* hk for more",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "  |Press without using L1/L2 mod |",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 1,
-    "name": "A          | Confirm/Action Menu",
-    "messages": ["You shouldn't be here. Press B to return."]
+    "name": "  |For LS Y-Axis help, press L3  |",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 2,
-    "name": "B          | Cancel/Main Menu",
-    "messages": ["You shouldn't be here. Press B to return."]
+    "name": "Start+Down | Text Input (hk for more)",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 3,
-    "name": "X          | Examine*",
-    "messages": ["Filter inputs when active. See Text Input help screen for more:\nHotkey+X     | Filter list\nHotkey+B     | Reset Filter",
-
-        "These inputs are active while in an inventory:\nX            | Examine\nL1+X         | Examine Contents\nSelect       | Toggle Categories\nL1+Select    | Switch Selection Mode\nStart        | Toggle Favorite\nLS Left      | Show/Hide All Contents\nLS Right     | Show/Hide Contents\nL3           | Organize Contents",
-
-        "This input is active while in construction:\nSelect       | Toggle Unavailable Construction Choices",
-
-        "These inputs are active while crafting:\nX            | Show Recipe Result\nY            | Show Related Recipes\nR1           | Select Crafter\nR2           | Batch Crafting\nL3           | Show Unread at Top\nSelect       | Toggle Read/Unread\nL1+Select    | Mark All as Read\nStart        | Toggle Favorite\nL1+Start     | Toggle Hidden",
-
-        "These inputs are active while in Bionics:\nX            | Examine\nY            | Toggle Safe Fuel Mod\nL3           | Sort Bionics\nR3           | Toggle Sprite",
-
-        "These inputs are active while in Mutations:\nX            | Examine\nR3           | Toggle Sprite",
-
-        "These inputs are active while Sorting Armor:\nX            | Equip from Inventory\nL1+X         | Equip from Inventory at Position\nY            | Swap Armor Side\nL3           | Sort Armor\nR1           | Assign Invlets\nR2           | Unequip Selected Armor\nR3           | Toggle Armor Sprite"]
+    "name": "A          | Confirm/Action Menu",
+    "messages": ["While in an inventory:\nX             | Examine\nL1+X          | Examine Contents\nSelect        | Toggle Categories\nL1+Select     | Switch Selection Mode\nStart         | Toggle Favorite\nLS Left       | Show/Hide All Contents\nLS Right      | Show/Hide Contents\nL3            | Organize Contents\nR3            | Reset Filter\nHotkey+X      | Filter List (See Text Input help screen for more)"]
   },
   {
     "type": "help",
     "order": 4,
-    "name": "Y          | Inventory*",
-    "messages": ["Filter inputs when active. See Text Input help screen for more:\nHotkey+X     | Filter list\nHotkey+B     | Reset Filter",
+    "name": "B          | Cancel/Main Menu",
+    "messages": ["While picking items up:\nRight         | Mark/Unmark Item\nX             | Examine\nL1+X          | Examine Contents\nY             | Wear\nR2            | Wield\nSelect        | Toggle Categories\nStart         | Toggle Favorite\nL1+Select     | Switch Selection Mode\nL1+LS Left    | Decrease Amount for Selected Item\nL1+LS Right   | Increase Amount for Selected Item",
+        
+        "While talking to an NPC:\nX             | Look At\nY             | Size Up Stats\nR1            | Assess Personality\nR2            | Yell\nStart         | Check Opinion",
 
-        "These inputs are active while peeking\nX            | Examine Target Description\nR1           | Blind Throw Item\nL3           | Center on Character\nL1+L3        | List Items and Monsters",
-
-        "These inputs are active while listing nearby items\nX            | Examine\nY            | Compare\nL1+R1        | Toggle Fast Scroll\nL3           | Change Sort Order\nSelect       | Decrease Priority\nStart        | Increase Priority",
-
-        "These inputs are active while picking items up:\nRight        | Mark/Unmark Item\nX            | Examine\nL1+X         | Examine Contents\nY            | Wear\nR2           | Wield\nSelect       | Toggle Categories\nStart        | Toggle Favorite\nL1+Select    | Switch Selection Mode\nL1+LS Left   | Decrease Amount for Selected Item\nL1+LS Right  | Increase Amount for Selected Item",
-
-        "These inputs are active while examining a vehicle:\nX            | Install Part\nL1+X         | Remove Part\nY            | Repair Part\nL1+Y         | Mend Part\nR1           | Refill Tank/Battery\nL1+R1        | Siphon from Tank\nR2           | Unload Fuel Bunker\nSelect       | Assign Crew\nL1+Select    | Change Part Shape\nStart        | Rename Vehicle\nL1+Start     | Label Vehicle Part"]
+        "While examining a vehicle:\nX             | Install Part\nL1+X          | Remove Part\nY             | Repair Part\nL1+Y          | Mend Part\nR1            | Refill Tank/Battery\nL1+R1         | Siphon from Tank\nR2            | Unload Fuel Bunker\nSelect        | Assign Crew\nL1+Select     | Change Part Shape\nStart         | Rename Vehicle\nL1+Start      | Label Vehicle Part"]
   },
   {
     "type": "help",
     "order": 5,
-    "name": "R1         | Aim Weapon*",
-    "messages": ["These inputs are active while aiming:\nX            | Switch Fire Mode\nY            | Switch Ammo\nR1           | Fire\nR2           | Aimed Shot\nL1+R2        | Careful Shot\nL2+R2        | Precise Shot\nL3           | Toggle Shift View/Cursor\nL1+L3        | Center on Character\nR3           | Snap to Target\nRS X-Axis    | Cycle Targets\nSelect       | Increase Aim\nStart        | Stop Aiming"]
+    "name": "X          | Examine",
+    "messages": ["While aiming:\nX             | Switch Fire Mode\nY             | Switch Ammo\nR1            | Fire\nR2            | Aimed Shot\nL1+R2         | Careful Shot\nL2+R2         | Precise Shot\nL3            | Toggle Shift View/Cursor\nL1+L3         | Center on Character\nR3            | Snap to Target\nRS X-Axis     | Cycle Targets\nSelect        | Increase Aim\nStart         | Stop Aiming"]
   },
   {
     "type": "help",
     "order": 6,
-    "name": "R2         | Use Wielded Item*",
-    "messages": ["Use an item that you are wielding. Most any item can be used, from weapons to tools to electronics devices.\nL1+R2 will let you choose from another item on hand or nearby to wield. Upon switching, you can put away or drop the previous item.\nL2+R2 will change the attack mode of the wielded item. If the item has no attack modes, nothing will happen."]
+    "name": "Y          | Inventory",
+    "messages": ["R2            | Use Wielded Item",
+
+        "L1+R2         | Wield Item (select same item to put away)",
+
+        "L2+R2         | Change Item Attack Mode (If the item has no attack modes, nothing will happen)"]
   },
   {
     "type": "help",
     "order": 7,
-    "name": "LS X-Axis  | Close/Peek*",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "R1         | Aim Weapon",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 8,
-    "name": "LS Y-Axis  | Up/Down Stairs",
+    "name": "R2         | Use Wielded Item",
     "messages": ["Activate this to enter text into input fields.", 
-        "While in Text Input:\nUp           | Previous letter\nDown         | Next letter\nLeft         | To next character\nRight        | Delete and move to previous character\nSelect       | Cancel and exit\nA/Start      | Enter and exit",
+        "While in Text Input:\nUp            | Previous letter\nDown          | Next letter\nLeft          | To next character\nRight         | Delete and move to previous character\nSelect        | Cancel and exit\nA/Start       | Enter and exit",
 
-        "Filtering inputs:\nHotkey+X     | Filter list\nHotkey+B     | Reset Filter",
+        "These can be used to filter items when available:\nHotkey+X      | Filter list\nHotkey+B      | Reset Filter",
 
-        "These inputs are active at points during Character Creation:\nX            | Save Template\nY            | Randomize Profession / Select Location\nL3           | Sort List\nR1           | Set Cataclysm Start Date\nL1+R1        | Reset Scenario Calender\nR2           | Set Game Start Date\nSelect       | Male/Female Outfit\nStart        | Male/Female\nL1+Select    | Randomize Name\nL1+Start     | Randomize Character Descriptors",
+        "These inputs are active at points during Character Creation:\nX             | Save Template\nY             | Randomize Profession / Select Location\nL3            | Sort List\nR1            | Set Cataclysm Start Date\nL1+R1         | Reset Scenario Calender\nR2            | Set Game Start Date\nSelect        | Male/Female Outfit\nStart         | Male/Female\nL1+Select     | Randomize Name\nL1+Start      | Randomize Character Descriptors",
 
-        "These inputs are active in World Creation\nX            | View Mod Manager\nY            | Advanced World Settings\nSelect       | Randomize Name\nStart        | Randomize World\nRStick Left  | Reset World\nRStick Right | Finalize World",
+        "While in World Creation\nX             | View Mod Manager\nY             | Advanced World Settings\nSelect        | Randomize Name\nStart         | Randomize World\nRStick Left   | Reset World\nRStick Right  | Finalize World",
 
-        "These inputs are active in Mod Manager\nX             | View Mod Description\nY             | Save Mods as Default\nR1            | Move Mod Down in Load Order\nR2            | Move Mod Up in Load Order"]
+        "While in Mod Manager\nX             | View Mod Description\nY             | Save Mods as Default\nR1            | Move Mod Down in Load Order\nR2            | Move Mod Up in Load Order",
+        
+        "Inputs for Advanced Users Only!\nHotkey+R1     | Open Keybinding Screen\nWhile in Keybinding Screen\nHotkey+R2     | Add Global Keybind (=)\nHotkey+L1     | Remove Keybind (-)\nHotkey+L2     | Add Local Keybind (+)\nHotkey+Y      | Reset Keybinding (*)\nHotkey+A      | Flexible Key for Mapping (&)"]
   },
   {
     "type": "help",
     "order": 9,
-    "name": "L3,L1/L2+R3| Look/List Items/Butcher*",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "LS X-Axis  | Close/Peek",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 10,
-    "name": "RS Left    | Menu Tab Left/Move Mode*",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "LS Y-Axis  | Up/Down Stairs",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 11,
-    "name": "RS Right   | Menu Tab Right/Attack*",
-    "messages": ["L3     | Activates Look Around. Move view with D-Pad, B to cancel.\nL1+L3  | Butcher a corpse you're standing on.\nL2+L3  | Talk to an NPC or yell indiscriminately."]
+    "name": "L3,L1/L2+L3| Look/List Items/Butcher",
+    "messages": ["L3            | Look Around\nWhile Looking Around\nD-Pad         | Move View\nL1/L2+D-Pad   | Move View (Diagonal Lock)\nLStick Up     | Move View Up on Z-Axis\nLStick Down   | Move View Down on Z-Axis\nX             | Examine Target Description\nR1            | Blind Throw Item\nL1+R1         | Toggle Fast Scroll\nL3            | Center on Character\nL1+L3         | List Items/Monsters",
+        
+        "While listing nearby items (L1+L3):\nA             | Travel to Selection\nX             | Examine\nY             | Compare\nL1+R1         | Toggle Fast Scroll\nL3            | Change Sort Order\nSelect        | Decrease Priority\nStart         | Increase Priority\nHotkey+X      | Filter List (See Text Input help screen for more)",
+
+        "While viewing Mutations (L1+LStick Up):\nX             | Examine\nR3            | Toggle Sprite",
+
+        "While viewing Bionics (L1+LStick Down):\nX             | Examine\nY             | Toggle Safe Fuel Mod\nL3            | Sort Bionics\nR3            | Toggle Sprite"]
   },
   {
     "type": "help",
     "order": 12,
-    "name": "RS Y-Axis  | Zoom In/Out*",
-    "messages": ["These inputs are active while map is open:\nX            | Choose/Go Destination\nY            | Mark Danger\nL1+R1        | Toggle Fast Scroll\nL3           | Center on Character\nR3           | Center on Destination\nSelect       | List Notes\nL1+Select    | Create/Edit Note\nL2+Select    | Delete Note\nStart        | View Missions",
+    "name": "RS X-Axis  | Tabbing/Move Mode/Attack",
+    "messages": ["While map is open:\nX            | Choose/Go Destination\nY            | Mark Danger\nL1+R1        | Toggle Fast Scroll\nL3           | Center on Character\nR3           | Center on Destination\nSelect       | List Notes\nL1+Select    | Create/Edit Note\nL2+Select    | Delete Note\nStart        | View Missions",
 
-        "These inputs are active while viewing Player Info screen:\nX            | View Proficiencies\nY            | View Morale\nR1           | View Body Status\nR2           | Select Trait Variant\nR3           | Change Armor Sprite\nSelect       | Change Profession Name\nStart        | View Medical\nHotkey       | Change Appearance / Name",
-
-        "While in Zones Manager\nX            | Add Zone\nY            | Add Personal Zone\nL1+Y         | Enable Personal Zones\nL2+Y         | Disable Personal Zones\nR1           | Enable Zone\nL1+R1        | Disable Zone\nL3           | Show/Hide Zones\nRStick       | Up Move Zone Up\nRStick Down  | Move Zone Down\nStart        | Show Zone on Map"]
+        "While viewing Player Info screen (L1+Start):\nX            | View Proficiencies\nY            | View Morale\nR1           | View Body Status\nR2           | Select Trait Variant\nR3           | Change Armor Sprite\nSelect       | Change Profession Name\nStart        | View Medical\nHotkey       | Change Appearance / Name", 
+        
+        "While viewing Medical:\nX            | Use Item"]
   },
   {
     "type": "help",
     "order": 13,
-    "name": "R3,L1/L2+R3| Smash/Grab/Haul*",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "RS Y-Axis  | Zoom In/Out",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 14,
-    "name": "Select     | Pass Turn*",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "R3,L1/L2+R3| Smash/Grab/Haul",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 15,
-    "name": "Start      | Map*",
-    "messages": ["This passes one turn in the game (1 second).\nL1+Select    | Wait a while\nL2+Select    | Go to Sleep"]
+    "name": "Select     | Pass Turn",
+    "messages": ["This passes one turn in the game (1 second).\nL1+Select     | Wait a while\nL2+Select     | Go to Sleep"]
   },
   {
     "type": "help",
     "order": 16,
-    "name": "L1/L2+Dpad | Diagonal Movement",
-    "messages": ["R3     | Smash something in a chosen direction. L1+D-Pad to lock to diagonals. Press Select to smash something below you. Useful for pulping dead enemies.\nL1+R3  | Grab something in a chosen direction.\nL2+R3  | Haul items you're standing on with you. Press again to stop hauling."]
+    "name": "Start      | Map",
+    "messages": ["R3            | Smash in a Chosen Direction (Useful for pulping enemies)\nWhile Smashing (L1+R3):\nD-Pad         | Move View\nL1/L2+D-Pad   | Move View (Diagonal Lock)\nSelect        | Smash Current Tile",
+
+        "L1+R2         | Grab Object\nWhile Grabbing (L1+R3)\nD-Pad         | Pull/Push/Move Object\nB             | Release Object",
+
+        "L2+R3         | Haul items you're standing on with you. Press again to stop hauling."]
   },
   {
     "type": "help",
     "order": 17,
-    "name": "L1+X/Y     | Pick Up/Drop Item",
+    "name": "L1/L2+Dpad | Diagonal Movement",
     "messages": ["How did you get here? Press B to return."]
   },
   {
     "type": "help",
     "order": 18,
-    "name": "L1/L2+R1   | Reload/Throw Item",
+    "name": "L1+X/Y     | Pick Up/Drop Item",
     "messages": ["How did you get here? Press B to return."]
   },
   {
     "type": "help",
     "order": 19,
-    "name": "L1+R2       | Wield Item",
-    "messages": ["Left Stick Left to close door/window/curtain/etc..\nLeft Stick Right peek around corners. After activation, press a direction to start peeking. L1+D-Pad can be used to lock to diagonals.\nWhen peeking, using D-Pad to move around. You can additionally use Left Stick Up/Down to peek up/down. B to cancel."]
+    "name": "L1/L2+R1    | Reload/Throw",
+    "messages": ["LStick Left    | Close Door/Window/Curtain/etc.",
+    
+        "L1+LStick Left | Toggle Safe Mode",
+
+        "While in Zones Manager\nX             | Add Zone\nY             | Add Personal Zone\nL1+Y          | Enable Personal Zones\nL2+Y          | Disable Personal Zones\nR1            | Enable Zone\nL1+R1         | Disable Zone\nL3            | Show/Hide Zones\nRStick        | Up Move Zone Up\nRStick Down   | Move Zone Down\nStart         | Show Zone on Map"]
   },
   {
     "type": "help",
     "order": 20,
-    "name": "L2+R2       | Item Attack Mode",
-    "messages": ["Left Stick Left to close door/window/curtain/etc..\nLeft Stick Right peek around corners. After activation, press a direction to start peeking. L1+D-Pad can be used to lock to diagonals.\nWhen peeking, using D-Pad to move around. You can additionally use Left Stick Up/Down to peek up/down. B to cancel."]
+    "name": "L1+R2       | Wield Item",
+    "messages": ["LStick Right  | Peek\nWhile Peeking\nD-Pad         | Move View\nL1/L2+D-Pad   | Move View (Diagonal Lock)\nLStick Up     | Move View Up on Z-Axis\nLStick Down   | Move View Down on Z-Axis\nX             | Examine Target Description\nR1            | Blind Throw Item\nL1+R1         | Toggle Fast Scroll\nL3            | Center on Character\nL1+L3         | List Items/Monsters",
+    
+        "While Sorting Armor (L1+LStick Right):\nX             | Equip from Inventory\nL1+X          | Equip from Inventory at Position\nY             | Swap Armor Side\nL3            | Sort Armor\nR1            | Assign Invlets\nR2            | Unequip Selected Armor\nR3            | Toggle Armor Sprite"]
   },
   {
     "type": "help",
     "order": 21,
-    "name": "L1+LS Left  | Toggle Safe Mode",
-    "messages": ["Right Stick Up     | Zoom In\nRight Stick Down   | Zoom Out"]
+    "name": "L2+R2       | Item Attack Mode",
+    "messages": ["RStick Up      | Zoom In",
+        
+        "L1+RStick Up   | Use Item\nFor controls, see Help screen for Inventory (Y)",
+        
+        "While in Advanced Inventory (L2+RStick Up):\nX              | Examine\nL1+X           | Examine in Container\nY              | Toggle Auto Pickup for Item\nR1             | Move Some Items\nL1+R1          | Move Item Stack\nL2+R1          | Move All Items\nL3             | Change Sorting Mode\nLStick Left    | Exit Container\nLStick Right   | Select Items in Container\nRStick Up      | Select Vehicle\nRStick Down    | Select Dragged Vehicle\nRStick Left    | Select Worn Items\nRStick Right   | Select Inventory\nL1+R3  Select  | Items at Center\nL1+LStick Up   | Select Items at Northwest\nL1+LStick Down | Select Items at Southeast\nL1+LStick Left | Select Items at Southwest\nL1+LStick Right| Select Items at Northeast\nL1+RStick Up   | Select Items at North\nL1+RStick Down | Select Items at South\nL1+RStick Left | Select Items at West\nL1+RStick Right| Select Items at East\nSelect         | Toggle Categories\nStart          | Toggle Favorite"]
   },
   {
     "type": "help",
     "order": 22,
-    "name": "L1+LS Right | Sort Armor",
-    "messages": ["Right Stick Up     | Zoom In\nRight Stick Down   | Zoom Out"]
+    "name": "L1+LS Left  | Toggle Safe Mode",
+    "messages": ["RStick Down    | Zoom Out",
+
+        "L1+RStick Down  | Consume Item\nFor controls, see Help screen for Inventory (Y)",
+        
+        "While in Construction (L2+RStick Down):\nSelect         | Toggle Unavailable Construction Choices"]
   },
   {
     "type": "help",
     "order": 23,
-    "name": "L1+LS Up    | Mutations",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L1+LS Right | Sort Armor",
+    "messages": ["RStick Left    | Tab Left When in Menu\nRStick Left    | Change Movement Mode",
+        
+        "L1+RStick Left | Take Off Item\nFor controls, see Help screen for Inventory (Y)",
+        
+        "L2+RStick Left | Disassemble Item\nFor controls, see Help screen for Inventory (Y)"]
   },
   {
     "type": "help",
     "order": 24,
-    "name": "L1+LS Down  | Bionics",
-    "messages": ["Used to tab left in menus with multiple tabs.\nOutside of menus, used to select the movement mode (prone/crouch/walk/walk)."]
+    "name": "L1+LS Up    | Mutations",
+    "messages": ["RStick Right   | Tab Right When in Menu\nRStick Right   | Attack a Nearby Enemy",
+        
+        "L2+RStick Right| Wear Item\nFor controls, see Help screen for Inventory (Y)",
+        
+        "While Crafting Item (L2+RStick Right):\nA              | Craft\nX              | Show Recipe Result\nY              | Show Related Recipes\nR1             | Select Crafter\nR2             | Batch Crafting\nR3             | Reset Filter\nL3             | Show Unread at Top\nSelect         | Toggle Read/Unread\nL1+Select      | Mark All as Read\nStart          | Toggle Favorite\nL1+Start       | Toggle Hidden\nHotkey+X       | Filter List (See Text Input help screen for more)"]
   },
   {
     "type": "help",
     "order": 25,
-    "name": "L1+RS X-Axis| Remove/Wear Item",
-    "messages": ["Used to tab right in menus with multiple tabs.\nOutside of menus, used to attack a nearby enemy."]
+    "name": "L1+LS Down  | Bionics",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 26,
-    "name": "L1+RS Y-Axis| Use/Consume Item",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L1+RS X-Axis| Remove/Wear Item",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 27,
-    "name": "L1/L2+Select| Wait/Sleep",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L1+RS Y-Axis| Use/Consume Item",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 28,
-    "name": "L1/L2+Start | Player/Msg. Log",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L1/L2+Select| Wait/Sleep",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 29,
-    "name": "L2+X/Y      | Insert/Unload",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L1/L2+Start | Player/Msg. Log",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 30,
-    "name": "L2+LS Left  | Zone Manager",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L2+X/Y      | Insert/Unload",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 31,
-    "name": "L2+LS Right | Zone Activities",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L2+LS Left  | Zone Manager",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 32,
-    "name": "L2+RS Left  | Disassemble",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L2+LS Right | Zone Activities",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 33,
-    "name": "L2+RS Right | Craft Item",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L2+RS Left  | Disassemble",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 34,
-    "name": "L2+RS Up    | Adv. Inventory",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L2+RS Right | Craft Item",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 35,
-    "name": "L2+RS Down  | Construction",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L2+RS Up    | Adv. Inventory",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   },
   {
     "type": "help",
     "order": 36,
-    "name": "* = Has additional Help screen",
-    "messages": ["Unfortunately, there is no Help support when using L1 or L2 modifiers... Press B to return."]
+    "name": "L2+RS Down  | Construction",
+    "messages": ["If you're trying to view Help for a button with L1 or L2 modifiers, please press it without the modifier. Press B to return."]
   }
 ]
