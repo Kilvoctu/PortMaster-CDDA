@@ -21,7 +21,7 @@
     "type": "help",
     "order": 3,
     "name": "A          | Confirm/Action Menu",
-    "messages": ["While in an inventory:\nX             | Examine\nL1+X          | Examine Contents\nSelect        | Toggle Categories\nL1+Select     | Switch Selection Mode\nStart         | Toggle Favorite\nLS Left       | Show/Hide All Contents\nLS Right      | Show/Hide Contents\nL3            | Organize Contents\nR3            | Reset Filter\nHotkey+X      | Filter List (See Text Input help screen for more)"]
+    "messages": ["While in an inventory (Y):\nX             | Examine\nL1+X          | Examine Contents\nSelect        | Toggle Categories\nL1+Select     | Switch Selection Mode\nStart         | Toggle Favorite\nLS Left       | Show/Hide All Contents\nLS Right      | Show/Hide Contents\nL3            | Organize Contents\nR3            | Reset Filter\nHotkey+X      | Filter List (See Text Input help screen for more)"]
   },
   {
     "type": "help",
@@ -59,16 +59,15 @@
     "type": "help",
     "order": 8,
     "name": "R2         | Use Wielded Item",
-    "messages": ["Activate this to enter text into input fields.", 
-        "While in Text Input:\nUp            | Previous letter\nDown          | Next letter\nLeft          | To next character\nRight         | Delete and move to previous character\nSelect        | Cancel and exit\nA/Start       | Enter and exit",
+    "messages": ["Activate this to enter text into input fields.\nWhile in Text Input:\nUp            | Previous letter\nDown          | Next letter\nLeft          | To next character\nRight         | Delete and move to previous character\nSelect        | Cancel and exit\nA/Start       | Enter and exit",
 
         "These can be used to filter items when available:\nHotkey+X      | Filter list\nHotkey+B      | Reset Filter",
 
         "These inputs are active at points during Character Creation:\nX             | Save Template\nY             | Randomize Profession / Select Location\nL3            | Sort List\nR1            | Set Cataclysm Start Date\nL1+R1         | Reset Scenario Calender\nR2            | Set Game Start Date\nSelect        | Male/Female Outfit\nStart         | Male/Female\nL1+Select     | Randomize Name\nL1+Start      | Randomize Character Descriptors",
 
-        "While in World Creation\nX             | View Mod Manager\nY             | Advanced World Settings\nSelect        | Randomize Name\nStart         | Randomize World\nRStick Left   | Reset World\nRStick Right  | Finalize World",
+        "While in World Creation:\nX             | View Mod Manager\nY             | Advanced World Settings\nSelect        | Randomize Name\nStart         | Randomize World\nRStick Left   | Reset World\nRStick Right  | Finalize World",
 
-        "While in Mod Manager\nX             | View Mod Description\nY             | Save Mods as Default\nR1            | Move Mod Down in Load Order\nR2            | Move Mod Up in Load Order",
+        "While in Mod Manager:\nX             | View Mod Description\nY             | Save Mods as Default\nR1            | Move Mod Down in Load Order\nR2            | Move Mod Up in Load Order",
         
         "Inputs for Advanced Users Only!\nHotkey+R1     | Open Keybinding Screen\nWhile in Keybinding Screen\nHotkey+R2     | Add Global Keybind (=)\nHotkey+L1     | Remove Keybind (-)\nHotkey+L2     | Add Local Keybind (+)\nHotkey+Y      | Reset Keybinding (*)\nHotkey+A      | Flexible Key for Mapping (&)"]
   },
@@ -91,6 +90,8 @@
     "messages": ["L3            | Look Around\nWhile Looking Around\nD-Pad         | Move View\nL1/L2+D-Pad   | Move View (Diagonal Lock)\nLStick Up     | Move View Up on Z-Axis\nLStick Down   | Move View Down on Z-Axis\nX             | Examine Target Description\nR1            | Blind Throw Item\nL1+R1         | Toggle Fast Scroll\nL3            | Center on Character\nL1+L3         | List Items/Monsters",
         
         "While listing nearby items (L1+L3):\nA             | Travel to Selection\nX             | Examine\nY             | Compare\nL1+R1         | Toggle Fast Scroll\nL3            | Change Sort Order\nSelect        | Decrease Priority\nStart         | Increase Priority\nHotkey+X      | Filter List (See Text Input help screen for more)",
+        
+        "L2+L3         | Butcher",
 
         "While viewing Mutations (L1+LStick Up):\nX             | Examine\nR3            | Toggle Sprite",
 
@@ -128,7 +129,7 @@
     "type": "help",
     "order": 16,
     "name": "Start      | Map",
-    "messages": ["R3            | Smash in a Chosen Direction (Useful for pulping enemies)\nWhile Smashing (L1+R3):\nD-Pad         | Move View\nL1/L2+D-Pad   | Move View (Diagonal Lock)\nSelect        | Smash Current Tile",
+    "messages": ["R3            | Smash in a Chosen Direction (Useful for pulping enemies)\nWhile Smashing:\nD-Pad         | Move View\nL1/L2+D-Pad   | Move View (Diagonal Lock)\nSelect        | Smash Current Tile",
 
         "L1+R2         | Grab Object\nWhile Grabbing (L1+R3)\nD-Pad         | Pull/Push/Move Object\nB             | Release Object",
 
@@ -154,7 +155,7 @@
     
         "L1+LStick Left | Toggle Safe Mode",
 
-        "While in Zones Manager\nX             | Add Zone\nY             | Add Personal Zone\nL1+Y          | Enable Personal Zones\nL2+Y          | Disable Personal Zones\nR1            | Enable Zone\nL1+R1         | Disable Zone\nL3            | Show/Hide Zones\nRStick        | Up Move Zone Up\nRStick Down   | Move Zone Down\nStart         | Show Zone on Map"]
+        "While in Zones Manager (L2+LStick Left)\nX              | Add Zone\nY              | Add Personal Zone\nL1+Y           | Enable Personal Zones\nL2+Y           | Disable Personal Zones\nR1             | Enable Zone\nL1+R1          | Disable Zone\nL3             | Show/Hide Zones\nRStick         | Up Move Zone Up\nRStick Down    | Move Zone Down\nStart          | Show Zone on Map"]
   },
   {
     "type": "help",
@@ -172,7 +173,7 @@
         
         "L1+RStick Up   | Use Item\nFor controls, see Help screen for Inventory (Y)",
         
-        "While in Advanced Inventory (L2+RStick Up):\nX              | Examine\nL1+X           | Examine in Container\nY              | Toggle Auto Pickup for Item\nR1             | Move Some Items\nL1+R1          | Move Item Stack\nL2+R1          | Move All Items\nL3             | Change Sorting Mode\nLStick Left    | Exit Container\nLStick Right   | Select Items in Container\nRStick Up      | Select Vehicle\nRStick Down    | Select Dragged Vehicle\nRStick Left    | Select Worn Items\nRStick Right   | Select Inventory\nL1+R3  Select  | Items at Center\nL1+LStick Up   | Select Items at Northwest\nL1+LStick Down | Select Items at Southeast\nL1+LStick Left | Select Items at Southwest\nL1+LStick Right| Select Items at Northeast\nL1+RStick Up   | Select Items at North\nL1+RStick Down | Select Items at South\nL1+RStick Left | Select Items at West\nL1+RStick Right| Select Items at East\nSelect         | Toggle Categories\nStart          | Toggle Favorite"]
+        "While in Advanced Inventory (L2+RStick Up):\nX              | Examine\nL1+X           | Examine in Container\nY              | Toggle Auto Pickup for Item\nR1             | Move Some Items\nL1+R1          | Move Item Stack\nL2+R1          | Move All Items\nL3             | Change Sorting Mode\nLStick Left    | Exit Container\nLStick Right   | Select Items in Container\nRStick Up      | Select Vehicle\nRStick Down    | Select Dragged Vehicle\nRStick Left    | Select Worn Items\nRStick Right   | Select Inventory\nL1+LStick Up   | Select Items at Northwest\nL1+LStick Down | Select Items at Southeast\nL1+LStick Left | Select Items at Southwest\nL1+LStick Right| Select Items at Northeast\nL1+RStick Up   | Select Items at North\nL1+RStick Down | Select Items at South\nL1+RStick Left | Select Items at West\nL1+RStick Right| Select Items at East\nL1+R3          | Select Items at Center\nSelect         | Toggle Categories\nStart          | Toggle Favorite"]
   },
   {
     "type": "help",
@@ -188,7 +189,7 @@
     "type": "help",
     "order": 23,
     "name": "L1+LS Right | Sort Armor",
-    "messages": ["RStick Left    | Tab Left When in Menu\nRStick Left    | Change Movement Mode",
+    "messages": ["RStick Left    | Tab Left When in Menu\n               | Change Movement Mode",
         
         "L1+RStick Left | Take Off Item\nFor controls, see Help screen for Inventory (Y)",
         
@@ -198,9 +199,9 @@
     "type": "help",
     "order": 24,
     "name": "L1+LS Up    | Mutations",
-    "messages": ["RStick Right   | Tab Right When in Menu\nRStick Right   | Attack a Nearby Enemy",
+    "messages": ["RStick Right   | Tab Right When in Menu\n               | Attack a Nearby Enemy",
         
-        "L2+RStick Right| Wear Item\nFor controls, see Help screen for Inventory (Y)",
+        "L1+RStick Right| Wear Item\nFor controls, see Help screen for Inventory (Y)",
         
         "While Crafting Item (L2+RStick Right):\nA              | Craft\nX              | Show Recipe Result\nY              | Show Related Recipes\nR1             | Select Crafter\nR2             | Batch Crafting\nR3             | Reset Filter\nL3             | Show Unread at Top\nSelect         | Toggle Read/Unread\nL1+Select      | Mark All as Read\nStart          | Toggle Favorite\nL1+Start       | Toggle Hidden\nHotkey+X       | Filter List (See Text Input help screen for more)"]
   },
