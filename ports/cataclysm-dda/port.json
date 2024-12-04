@@ -1,11 +1,11 @@
 {
-    "version": 2,
+    "version": 3,
     "name": "cataclysm-dda.zip",
     "items": [
         "Cataclysm DDA.sh",
         "cataclysm-dda"
     ],
-    "items_opt": [],
+    "items_opt": null,
     "attr": {
         "title": "Cataclysm: Dark Days Ahead",
         "porter": [
@@ -17,12 +17,15 @@
         "genres": [
             "rpg"
         ],
-        "image": null,
+        "image": {},
         "rtr": true,
         "runtime": null,
         "reqs": [],
         "arch": [
             "aarch64"
-        ]
+        ],
+        "desc_md": null,
+        "inst_md": null,
+        "exp": false
     }
 }

@@ -18,7 +18,7 @@
     "player_display": false,
     "dummy": true,
     "category": [ "HUMAN" ],
-    "types": [ "BIOLUM", "HAIR", "HORNS", "TAIL", "WHISKERS", "WINGS", "TUSKS", "BODY_ARMOR_MOD" ],
+    "types": [ "BIOLUM", "HORNS", "HAIR", "TAIL", "WHISKERS", "WINGS", "TUSKS", "BODY_ARMOR_MOD" ],
     "cancels": [ "ARM_FEATHERS", "CF_HAIR", "HAIRROOTS", "INK_GLANDS", "THORNS", "TRANSPIRATION", "WEB_RAPPEL", "WEB_ROPE" ],
     "description": "You don't have any tails, whiskers, horns, or miscellaneous extra bits."
   },
@@ -234,6 +234,7 @@
       "RADIOGENIC",
       "RADIOPHILE",
       "RESISTCHILL",
+      "RESISTCHILL_RESISTWARM",
       "RESISTWARM",
       "ROBUST",
       "STOCKY_TROGLO",
@@ -282,7 +283,17 @@
     "player_display": false,
     "dummy": true,
     "category": [ "HUMAN" ],
-    "cancels": [ "DISIMMUNE", "DISRESISTANT", "INFIMMUNE", "INFRESIST", "NONADDICTIVE", "PARAIMMUNE", "POISRESIST", "STIMBOOST" ],
+    "cancels": [
+      "DISIMMUNE",
+      "DISRESISTANT",
+      "INFIMMUNE",
+      "INFRESIST",
+      "NONADDICTIVE",
+      "PARAIMMUNE",
+      "POISRESIST",
+      "STIMBOOST",
+      "SEASONAL_ALLERGIES"
+    ],
     "description": "Your immune system is more or less normal for a human."
   },
   {
@@ -293,7 +304,7 @@
     "player_display": false,
     "dummy": true,
     "category": [ "HUMAN" ],
-    "cancels": [ "RESISTCHILL", "STRONGER_RESISTCHILL", "RESISTWARM", "STRONGER_RESISTWARM" ],
+    "cancels": [ "STRONGER_RESISTCHILL", "STRONGER_RESISTWARM" ],
     "description": "Your temperature tolerance is more or less normal for a human."
   },
   {
@@ -307,82 +318,6 @@
     "category": [ "SPIDER", "MOUSE", "RABBIT", "BIRD" ],
     "types": [ "RUNNING" ],
     "movecost_flatground_modifier": 0.85
-  },
-  {
-    "type": "mutation",
-    "id": "HAS_LEFT_LEG",
-    "name": { "str": "left leg" },
-    "points": 0,
-    "valid": false,
-    "purifiable": false,
-    "player_display": false,
-    "description": "Dummy mutation that keeps you from wearing prosthetics.",
-    "changes_to": [ "NO_LEFT_LEG" ],
-    "restricts_gear": [ "leg_stub_l" ]
-  },
-  {
-    "type": "mutation",
-    "id": "HAS_RIGHT_LEG",
-    "name": { "str": "right leg" },
-    "points": 0,
-    "valid": false,
-    "purifiable": false,
-    "player_display": false,
-    "description": "Dummy mutation that keeps you from wearing prosthetics.",
-    "changes_to": [ "NO_RIGHT_LEG" ],
-    "restricts_gear": [ "leg_stub_r" ]
-  },
-  {
-    "type": "mutation",
-    "id": "NO_RIGHT_LEG",
-    "name": { "str": "No Right Leg" },
-    "points": 0,
-    "valid": false,
-    "purifiable": false,
-    "description": "Whether by a serious accident, birth defect, or other means, you have lost your right leg.  You can hobble around, but will likely need a wheelchair or other means of locomotion to get somewhere far.",
-    "no_cbm_on_bp": [ "leg_knee_r", "leg_lower_r", "leg_draped_r", "foot_r" ],
-    "restricts_gear": [ "foot_r" ],
-    "prereqs": "HAS_RIGHT_LEG",
-    "allowed_items": [ "LEG_PROSTHETIC" ],
-    "enchantments": [ "ENCH_NO_RIGHT_LEG" ]
-  },
-  {
-    "type": "mutation",
-    "id": "NO_LEFT_LEG",
-    "name": { "str": "No Left Leg" },
-    "points": 0,
-    "valid": false,
-    "purifiable": false,
-    "description": "Whether by a serious accident, birth defect, or other means, you have lost your left leg.  You can hobble around, but will likely need a wheelchair or other means of locomotion to get somewhere far.",
-    "no_cbm_on_bp": [ "leg_knee_l", "leg_lower_l", "leg_draped_l", "foot_l" ],
-    "restricts_gear": [ "foot_l" ],
-    "prereqs": "HAS_LEFT_LEG",
-    "allowed_items": [ "LEG_PROSTHETIC" ],
-    "enchantments": [ "ENCH_NO_LEFT_LEG" ]
-  },
-  {
-    "type": "mutation",
-    "id": "RIGHT_PROSTHETIC_LEG",
-    "name": { "str": "Right Prosthetic Leg" },
-    "points": 0,
-    "valid": false,
-    "purifiable": false,
-    "description": "You have a prosthetic on your right leg.",
-    "no_cbm_on_bp": [ "leg_knee_r", "leg_lower_r", "leg_draped_r", "foot_r" ],
-    "processed_eocs": [ "EOC_PROSTHETIC_RIGHT_WEAR" ],
-    "enchantments": [ "ENCH_RIGHT_PROSTHETIC" ]
-  },
-  {
-    "type": "mutation",
-    "id": "LEFT_PROSTHETIC_LEG",
-    "name": { "str": "Left Prosthetic Leg" },
-    "points": 0,
-    "valid": false,
-    "purifiable": false,
-    "description": "You have a prosthetic on your left leg.",
-    "no_cbm_on_bp": [ "leg_knee_l", "leg_lower_l", "leg_draped_l", "foot_l" ],
-    "processed_eocs": [ "EOC_PROSTHETIC_LEFT_WEAR" ],
-    "enchantments": [ "ENCH_LEFT_PROSTHETIC" ]
   },
   {
     "type": "mutation",
@@ -470,6 +405,8 @@
     "category": [ "INSECT" ],
     "threshreq": [ "THRESH_INSECT" ],
     "active": true,
+    "kcal": true,
+    "cost": 400,
     "activated_eocs": [ "EOC_BIOLUM3_activated" ]
   },
   {
@@ -520,6 +457,16 @@
   },
   {
     "type": "mutation",
+    "id": "SEASONAL_AFFECTIVE",
+    "name": { "str": "Seasonal Affective Disorder" },
+    "points": -1,
+    "description": "You tend to have bouts of depression during the fall and especially winter.  Taking antidepressants can help.",
+    "starting_trait": true,
+    "types": [ "ATTITUDE" ],
+    "category": [ "PLANT", "ELFA", "MEDICAL" ]
+  },
+  {
+    "type": "mutation",
     "id": "GOODHEARING",
     "name": { "str": "Good Hearing" },
     "points": 1,
@@ -548,7 +495,7 @@
     "name": { "str": "Inattentive" },
     "points": -2,
     "starting_trait": true,
-    "description": "You never paid attention to your surroundings and specifically to people around you.  You can't judge intent of critters you see.",
+    "description": "You never paid attention to your surroundings and specifically to people around you.  You can't judge the intent of critters you see.",
     "purifiable": false,
     "valid": false
   },
@@ -837,7 +784,7 @@
     "category": [ "CATTLE" ],
     "movecost_modifier": 1.02,
     "movecost_swim_modifier": 1.3,
-    "hp_modifier": 0.1
+    "hp_adjustment": 14
   },
   {
     "type": "mutation",
@@ -850,7 +797,7 @@
     "category": [ "CATTLE" ],
     "movecost_modifier": 1.04,
     "movecost_swim_modifier": 1.7,
-    "hp_modifier": 0.2
+    "hp_adjustment": 21
   },
   {
     "type": "mutation",
@@ -1181,7 +1128,22 @@
     "description": "You're an excellent navigator and your ability to recognize distant landmarks is unmatched.  Your sight radius on the overmap extends beyond the normal range.",
     "category": [ "BIRD", "MOUSE", "CEPHALOPOD" ],
     "cancels": [ "UNOBSERVANT" ],
-    "overmap_sight": 5
+    "overmap_sight": 5,
+    "triggers": [ [ { "condition": { "not": "is_day" }, "msg_on": { "text": "", "rating": "good" } } ] ],
+    "transform": { "target": "EAGLEEYED_NIGHT", "msg_transform": "", "active": false, "moves": 0 }
+  },
+  {
+    "type": "mutation",
+    "id": "EAGLEEYED_NIGHT",
+    "//": "Indistinguishable to player, version without overmap_sight so it doesn't work at night.",
+    "name": { "str": "Scout" },
+    "points": 1,
+    "description": "You're an excellent navigator and your ability to recognize distant landmarks is unmatched.  Your sight radius on the overmap extends beyond the normal range.",
+    "category": [ "BIRD", "MOUSE", "CEPHALOPOD" ],
+    "cancels": [ "UNOBSERVANT" ],
+    "valid": false,
+    "triggers": [ [ { "condition": "is_day", "msg_on": { "text": "", "rating": "good" } } ] ],
+    "transform": { "target": "EAGLEEYED", "msg_transform": "", "active": false, "moves": 0 }
   },
   {
     "type": "mutation",
@@ -2188,7 +2150,7 @@
     "points": 1,
     "description": "Man's oldest and most well known friends are all Lupines.  Somehow you've mutated something that reminds other survivors of your more domestic relatives.  A softer edge around the eyes, maybe.",
     "types": [ "EYES" ],
-    "prereqs": [ "LIGHTFUR" ],
+    "prereqs": [ "LUPINE_FUR", "LUPINE_FUR_SUMMER" ],
     "category": [ "LUPINE" ],
     "mixed_effect": true,
     "social_modifiers": { "lie": -5, "persuade": 5, "intimidate": -5 }
@@ -2776,10 +2738,10 @@
     "ugliness": 2,
     "bodytemp_sleep": 75,
     "description": "Light fur has grown to cover your entire body, providing marginal protection against attacks and slight protection from cold.",
-    "category": [ "MOUSE", "BEAST", "CATTLE", "RAT", "FELINE", "LUPINE", "RABBIT", "URSINE" ],
+    "category": [ "MOUSE", "BEAST", "RAT", "LUPINE", "URSINE", "FELINE", "RABBIT", "CATTLE" ],
     "types": [ "SKIN" ],
     "prereqs": [ "HIRSUTE" ],
-    "changes_to": [ "FUR", "FELINE_FUR", "LUPINE_FUR", "RABBIT_FUR" ],
+    "changes_to": [ "FUR", "FELINE_FUR", "LUPINE_FUR", "RABBIT_FUR", "LUPINE_FUR_SUMMER" ],
     "integrated_armor": [ "integrated_lightfur" ]
   },
   {
@@ -2792,7 +2754,7 @@
     "bodytemp_sleep": 200,
     "description": "Thick black fur has grown to cover your entire body, providing minor protection against attacks, and considerable protection from cold.",
     "types": [ "SKIN" ],
-    "changes_to": [ "URSINE_FUR" ],
+    "changes_to": [ "URSINE_FUR", "URSINE_FUR_SUMMER" ],
     "prereqs": [ "LIGHTFUR" ],
     "category": [ "CATTLE", "RAT", "URSINE" ],
     "integrated_armor": [ "integrated_fur" ]
@@ -2813,6 +2775,19 @@
   },
   {
     "type": "mutation",
+    "id": "URSINE_FUR_SUMMER",
+    "name": { "str": "Scruffy Fur" },
+    "points": 4,
+    "visibility": 10,
+    "ugliness": 4,
+    "bodytemp_sleep": 225,
+    "description": "You've lost your fluffy undercoat for the summer.  This feels a lot better in the heat, but it's less protective and looks a little bedraggled.",
+    "types": [ "SKIN" ],
+    "prereqs": [ "FUR" ],
+    "integrated_armor": [ "integrated_ursine_fur_summer" ]
+  },
+  {
+    "type": "mutation",
     "id": "LUPINE_FUR",
     "name": { "str": "Gray Fur" },
     "points": 2,
@@ -2824,6 +2799,19 @@
     "prereqs": [ "LIGHTFUR" ],
     "category": [ "LUPINE" ],
     "integrated_armor": [ "integrated_lupine_fur" ]
+  },
+  {
+    "type": "mutation",
+    "id": "LUPINE_FUR_SUMMER",
+    "name": { "str": "Summer Coat" },
+    "points": 2,
+    "visibility": 10,
+    "ugliness": 3,
+    "bodytemp_sleep": 175,
+    "description": "Your entire body is covered in dense fur, but it's thinned out a bit for the summer, which may provide some relief from the heat at the cost of physical protection.",
+    "types": [ "SKIN" ],
+    "prereqs": [ "LIGHTFUR" ],
+    "integrated_armor": [ "integrated_lupine_fur_summer" ]
   },
   {
     "type": "mutation",
@@ -3052,7 +3040,7 @@
     "description": "You've grown a sclerotin exoskeleton, akin to an organic suit of platemail.  It provides excellent physical protection and makes your punches hit harder, but reduces your Dexterity by 1 and encumbers all body parts but your eyes and mouth.  Greatly reduces wet effects.",
     "types": [ "BODY_ARMOR" ],
     "prereqs": [ "CHITIN2" ],
-    "category": [ "SPIDER", "CRUSTACEAN" ],
+    "category": [ "SPIDER" ],
     "leads_to": [ "CHITIN_FUR3" ],
     "integrated_armor": [ "integrated_chitin3", "integrated_chitin3_claws" ],
     "wet_protection": [
@@ -3131,8 +3119,7 @@
     "ugliness": 8,
     "description": "You're covered in a great chitin carapace which reduces your Dexterity by 1, however it has recently molted and will offer poor protection until it has time to harden.  Greatly reduces wet effects.",
     "types": [ "BODY_ARMOR" ],
-    "prereqs": [ "CHITIN2" ],
-    "category": [ "CRUSTACEAN" ],
+    "prereqs": [ "CHITIN2_MOLTED" ],
     "leads_to": [ "CRUSTACEAN_CLAW" ],
     "integrated_armor": [ "integrated_carapace_molted" ],
     "wet_protection": [
@@ -3220,7 +3207,6 @@
     "visibility": 10,
     "ugliness": 9,
     "description": "Instead of your right hand, you now have a giant claw resembling ones found on crabs.  It encumbers you greatly, but you can use it in melee combat to deal massive damage.",
-    "valid": false,
     "cancels": [ "NAILS", "CLAWS", "TALONS", "WEBBED", "ARM_TENTACLES", "ARM_TENTACLES_4", "ARM_TENTACLES_8" ],
     "prereqs": [ "CRUSTACEAN_CARAPACE" ],
     "integrated_armor": [ "integrated_giant_pincer" ],
@@ -3392,7 +3378,6 @@
     "prereqs": [ "LEAVES" ],
     "prereqs2": [ "TRANSPIRATION" ],
     "threshreq": [ "THRESH_PLANT" ],
-    "changes_to": [ "LEAVES3" ],
     "category": [ "PLANT" ],
     "wet_protection": [ { "part": "head", "ignored": 4 }, { "part": "arm_l", "ignored": 5 }, { "part": "arm_r", "ignored": 5 } ],
     "encumbrance_covered": [ [ "arm_l", 5 ], [ "arm_r", 5 ] ]
@@ -3440,8 +3425,7 @@
     "threshreq": [ "THRESH_PLANT", "THRESH_ELFA" ],
     "category": [ "PLANT", "ELFA" ],
     "changes_to": [ "ROSEBUDS" ],
-    "scent_mask": -200,
-    "social_modifiers": { "lie": 10 }
+    "scent_mask": -200
   },
   {
     "type": "mutation",
@@ -3456,7 +3440,8 @@
     "cancels": [ "SMELLY", "SMELLY2" ],
     "threshreq": [ "THRESH_PLANT", "THRESH_ELFA" ],
     "category": [ "PLANT", "ELFA" ],
-    "social_modifiers": { "lie": 15, "persuade": 10 }
+    "social_modifiers": { "lie": 15, "persuade": 10 },
+    "player_display": false
   },
   {
     "type": "mutation",
@@ -3649,21 +3634,13 @@
     "points": 1,
     "visibility": 1,
     "ugliness": 1,
-    "description": "Several ink glands have grown onto your torso.  They can be used to spray defensive ink and blind an attacker in an emergency, as long as the torso isn't covered.",
-    "enchantments": [
-      {
-        "hit_me_effect": [
-          {
-            "id": "generic_blinding_spray_1",
-            "hit_self": false,
-            "once_in": 15,
-            "message": "Your ink glands spray some ink into %2$s's eyes!",
-            "npc_message": "%1$s's ink glands spray some ink into %2$s's eyes!"
-          }
-        ]
-      }
-    ],
-    "category": [ "CEPHALOPOD" ]
+    "description": "Several ink glands have developed in your gill structure.  When active, they will spray defensive ink and blind an attacker in an emergency.",
+    "enchantments": [ { "condition": "ACTIVE", "hit_me_effect": [ { "id": "ink_gland_spray_primer", "once_in": 2, "hit_self": true } ] } ],
+    "prereqs": [ "GILLS_CEPH" ],
+    "threshreq": [ "THRESH_CEPHALOPOD" ],
+    "category": [ "CEPHALOPOD" ],
+    "active": true,
+    "starts_active": true
   },
   {
     "type": "mutation",
@@ -3673,7 +3650,11 @@
     "visibility": 1,
     "ugliness": 2,
     "description": "You exude slime from your pores.  You can spread that slime on an opponent in melee range.",
-    "spells_learned": [ [ "spell_slime_spray", 1 ] ],
+    "active": true,
+    "kcal": true,
+    "cost": 700,
+    "activated_is_setup": false,
+    "activated_eocs": [ "EOC_SLIME_SPRAY" ],
     "prereqs": [ "VISCOUS", "AMORPHOUS" ],
     "category": [ "GASTROPOD" ]
   },
@@ -3693,7 +3674,7 @@
   {
     "type": "mutation",
     "id": "BOMBADIER_BLAST",
-    "name": { "str": "Bombadier Beetle Blast" },
+    "name": { "str": "Bombardier Beetle Blast" },
     "points": 5,
     "visibility": 1,
     "ugliness": 2,
@@ -3863,6 +3844,15 @@
     "prereqs2": [ "INFRESIST" ],
     "category": [ "MEDICAL" ],
     "flags": [ "INFECTION_IMMUNE" ]
+  },
+  {
+    "type": "mutation",
+    "id": "SEASONAL_ALLERGIES",
+    "name": { "str": "Seasonal Allergies" },
+    "points": -1,
+    "starting_trait": true,
+    "description": "You tend to get hay fever, especially in springtime.  Antihistamines are your friend.",
+    "category": [ "CHIMERA", "BEAST" ]
   },
   {
     "type": "mutation",
@@ -4140,7 +4130,11 @@
     "points": 1,
     "description": "You've gained a strong ability to leap a short distance from a standing position with little preparation time.",
     "//": "This is differentiated from the other two leaps by a shorter range yet a shorter prep time. Probably less useful than them since it will still exhaust you.",
-    "spells_learned": [ [ "spell_feline_leap", 1 ] ],
+    "active": true,
+    "kcal": true,
+    "cost": 400,
+    "activated_is_setup": false,
+    "activated_eocs": [ "EOC_FELINE_LEAP" ],
     "cancels": [ "LEAPING_LEGS", "LEAPING_LEGS2" ],
     "prereqs": [ "TAIL_LONG" ],
     "prereqs2": [ "STRONG_LEGS" ],
@@ -4155,7 +4149,9 @@
     "visibility": 3,
     "ugliness": 1,
     "description": "You've gained a strong ability to leap from a standing position.",
-    "spells_learned": [ [ "spell_short_leap", 1 ] ],
+    "active": true,
+    "activated_is_setup": false,
+    "activated_eocs": [ "EOC_SHORT_LEAP" ],
     "prereqs": [ "STRONG_LEGS" ],
     "changes_to": [ "LEAPING_LEGS2" ],
     "category": [ "BATRACHIAN", "RABBIT" ],
@@ -4169,7 +4165,9 @@
     "visibility": 3,
     "ugliness": 1,
     "description": "You've gained a strong ability to leap a significant distance from a standing position and crush whatever you land on.",
-    "spells_learned": [ [ "spell_crushing_leap", 1 ] ],
+    "active": true,
+    "activated_is_setup": false,
+    "activated_eocs": [ "EOC_CRUSHING_LEAP" ],
     "prereqs": [ "LEAPING_LEGS" ],
     "threshreq": [ "THRESH_BATRACHIAN" ],
     "category": [ "BATRACHIAN" ]
@@ -4204,7 +4202,9 @@
     "ugliness": 2,
     "mixed_effect": true,
     "description": "Your legs and feet have become bird-like.  Instead of toes you now have three long talons at the front and one at the back, ending in wicked claws and preventing you from wearing shoes.  Fortunately they don't impede your movement.",
-    "spells_learned": [ [ "spell_avian_leap", 1 ] ],
+    "active": true,
+    "activated_is_setup": false,
+    "activated_eocs": [ "EOC_AVIAN_LEAP" ],
     "types": [ "LEGS", "FEET" ],
     "prereqs": [ "WINGS_BIRD" ],
     "threshreq": [ "THRESH_BIRD" ],
@@ -5117,6 +5117,7 @@
     "description": "You have a pair of large, feathered wings.  Your body is too heavy to be able to fly, but you can use them to slow your descent during a fall, and will not take falling damage under any circumstances.",
     "types": [ "WINGS" ],
     "prereqs": [ "WINGS_STUB" ],
+    "prereqs2": [ "HOLLOW_BONES" ],
     "threshreq": [ "THRESH_BIRD" ],
     "category": [ "BIRD" ],
     "flags": [ "WINGS_2" ]
@@ -5237,7 +5238,6 @@
     "threshreq": [ "THRESH_GASTROPOD" ],
     "leads_to": [ "GASTROPOD_BALANCE" ],
     "flags": [ "SLUDGE_IMMUNE" ],
-    "enchantments": [ "ENCH_GASTROPOD_FOOT" ],
     "visibility": 8,
     "ugliness": 9,
     "encumbrance_always": [ [ "leg_l", 10 ], [ "leg_r", 10 ], [ "foot_l", 10 ], [ "foot_r", 10 ] ],
@@ -5326,6 +5326,7 @@
     "ugliness": 1,
     "description": "Your hearing has evolved further and is now on par with that of wolves.  You can hear things significantly farther away.",
     "types": [ "EARS" ],
+    "prereqs": [ "CANINE_EARS" ],
     "category": [ "LUPINE" ],
     "hearing_modifier": 1.75
   },
@@ -6076,6 +6077,7 @@
     "points": 0,
     "visibility": 8,
     "ugliness": 4,
+    "types": [ "EYES" ],
     "description": "Your eyes bulge out several inches from your skull.  This does not affect your vision in any way.",
     "leads_to": [ "MEMBRANE" ],
     "changes_to": [ "COMPOUND_EYES", "EYESTALKS1", "FROG_EYES" ],
@@ -6511,7 +6513,7 @@
     "movecost_swim_modifier": 1.2,
     "attackcost_modifier": 1.05,
     "weight_capacity_modifier": 1.15,
-    "hp_modifier": 0.05,
+    "hp_adjustment": 4,
     "dodge_modifier": -1,
     "armor": [ { "part_types": [ "torso", "head", "arm", "hand", "leg", "foot", "mouth", "tail" ], "bash": 2 } ]
   },
@@ -6787,6 +6789,7 @@
     "description": "Sunlight makes you uncomfortable.  If you are outdoors and the weather is Sunny, you suffer -1 to all stats.",
     "types": [ "SUNLIGHT" ],
     "changes_to": [ "TROGLO2" ],
+    "cancels": [ "SEASONAL_AFFECTIVE" ],
     "category": [ "BEAST", "INSECT", "SLIME", "SPIDER", "BATRACHIAN", "RAT", "TROGLOBITE" ]
   },
   {
@@ -7081,7 +7084,7 @@
     "points": 2,
     "visibility": 7,
     "ugliness": 6,
-    "description": "Your body is coated with a fine slime.  Protects from long-term effects of acid, though not short-term ones.  Greatly increases wet benefits.",
+    "description": "Your body is coated with a fine slime which makes uncovered skin harder to grab and protects from long-term effects of acid, though not short-term ones.  Greatly increases wet benefits.",
     "types": [ "SECRETION" ],
     "leads_to": [ "SLIME_HANDS" ],
     "changes_to": [ "VISCOUS" ],
@@ -7106,7 +7109,7 @@
     "points": 4,
     "visibility": 7,
     "ugliness": 8,
-    "description": "Your body's slime output has become sticky and gel-like.  Somewhat protects from acid.  Greatly increases wet benefits.",
+    "description": "Your body's slime output has become sticky and gel-like, making uncovered skin harder to grab and offering some protection from acid.  Greatly increases wet benefits.",
     "leads_to": [ "AMORPHOUS" ],
     "prereqs": [ "SLIMY" ],
     "threshreq": [ "THRESH_SLIME", "THRESH_GASTROPOD" ],
@@ -7366,7 +7369,7 @@
     "points": 10,
     "visibility": 7,
     "ugliness": 1,
-    "description": "Every inch of your skin is packed with chlorophyll and you have strong roots.  Sleeping on diggable soil will satisfy any hunger or thirst you might have.  Activate this mutation to force yourself to sleep until nightfall.",
+    "description": "Every inch of your skin is packed with chlorophyll and you have strong roots.  Sleeping on diggable soil will satisfy any hunger or thirst you might have.",
     "purifiable": false,
     "types": [ "LEGS", "FEET" ],
     "prereqs": [ "ROOTS3" ],
@@ -7376,8 +7379,6 @@
     "category": [ "PLANT" ],
     "scent_type": "sc_flower",
     "encumbrance_covered": [ [ "foot_l", 10 ], [ "foot_r", 10 ] ],
-    "active": true,
-    "cost": 0,
     "flags": [ "TOUGH_FEET", "ROOTS3" ]
   },
   {
@@ -7545,7 +7546,7 @@
     "visibility": 8,
     "ugliness": 2,
     "description": "Your arms have grown vibrantly-colored feathers.  They effectively waterproof your arms and take the edge off hits, but really get in the way.  They're simply too small to help you in the air.",
-    "category": [ "RAPTOR" ],
+    "category": [ "RAPTOR", "BIRD" ],
     "wet_protection": [
       { "part": "arm_l", "neutral": 50 },
       { "part": "arm_r", "neutral": 50 },
@@ -8734,6 +8735,16 @@
   },
   {
     "type": "mutation",
+    "id": "DEBUG_LIGHT",
+    "name": { "str": "Debug Light" },
+    "points": 99,
+    "valid": false,
+    "description": "You start to emit a light, so you can debug in the darkest nights.",
+    "debug": true,
+    "enchantments": [ { "values": [ { "value": "LUMINATION", "add": 9000 } ] } ]
+  },
+  {
+    "type": "mutation",
     "id": "DEBUG_HS",
     "name": { "str": "Debug Hammerspace" },
     "points": 99,
@@ -8909,8 +8920,8 @@
     "name": { "str": "Rabbit Ears" },
     "points": 1,
     "visibility": 9,
-    "ugliness": -1,
-    "description": "Your ears have grown into tall, flexible and pretty rabbit ears.  They're are slender and enhance your hearing beyond the normal range.",
+    "ugliness": 1,
+    "description": "Your ears have grown into tall and flexible rabbit ears.  They're are slender and enhance your hearing beyond the normal range.",
     "types": [ "EARS" ],
     "category": [ "RABBIT" ],
     "hearing_modifier": 1.8
@@ -8921,8 +8932,8 @@
     "name": { "str": "Rabbit Tail" },
     "points": 0,
     "visibility": 1,
-    "ugliness": -1,
-    "description": "Your stubby tail has become fuzzy and more round.  It looks adorable, but doesn't seem to serve another purpose beyond that.",
+    "ugliness": 1,
+    "description": "Your stubby tail has become fuzzy and more round, but doesn't seem to serve any purpose.",
     "types": [ "TAIL" ],
     "cancels": [ "TAIL_STUB" ],
     "category": [ "RABBIT" ]
@@ -9164,16 +9175,7 @@
     "prereqs": [ "RESISTCHILL" ],
     "category": [ "LUPINE", "URSINE", "CATTLE", "FELINE", "RABBIT", "MOUSE", "BEAST" ],
     "types": [ "ACCLIMATIZATION", "ECTOTHERMIC" ],
-    "threshreq": [
-      "THRESH_LUPINE",
-      "THRESH_URSINE",
-      "THRESH_CATTLE",
-      "THRESH_FELINE",
-      "THRESH_RABBIT",
-      "THRESH_MOUSE",
-      "THRESH_BEAST",
-      "THRESH_PLANT"
-    ],
+    "threshreq": [ "THRESH_LUPINE", "THRESH_URSINE", "THRESH_CATTLE", "THRESH_FELINE", "THRESH_RABBIT", "THRESH_MOUSE", "THRESH_BEAST" ],
     "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 25 } ] } ]
   },
   {
@@ -9184,7 +9186,6 @@
     "description": "You fare better than most in warmer climates and are less bothered by hotter temperatures.  Note that while you it will take more heat and exposure for you to suffer from sunstroke, this will not make dealing with its consequences any easier.",
     "starting_trait": true,
     "changes_to": [ "STRONGER_RESISTWARM" ],
-    "types": [ "ACCLIMATIZATION" ],
     "category": [ "FISH", "CEPHALOPOD", "GASTROPOD", "LIZARD", "BATRACHIAN", "PLANT" ],
     "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "CLIMATE_CONTROL_CHILL", "add": 10 } ] } ]
   },
@@ -9198,7 +9199,7 @@
     "prereqs": [ "RESISTWARM" ],
     "types": [ "ACCLIMATIZATION" ],
     "category": [ "FISH", "CEPHALOPOD", "GASTROPOD", "LIZARD", "BATRACHIAN", "PLANT" ],
-    "threshreq": [ "THRESH_FISH", "THRESH_CEPHALOPOD", "THRESH_GASTROPOD", "THRESH_LIZARD", "THRESH_BATRACHIAN", "THRESH_PLANT" ],
+    "threshreq": [ "THRESH_FISH", "THRESH_CEPHALOPOD", "THRESH_GASTROPOD", "THRESH_LIZARD", "THRESH_BATRACHIAN" ],
     "enchantments": [ { "condition": "ALWAYS", "values": [ { "value": "CLIMATE_CONTROL_CHILL", "add": 25 } ] } ]
   },
   {
@@ -9247,6 +9248,22 @@
   },
   {
     "type": "mutation",
+    "id": "RESISTCHILL_RESISTWARM",
+    "name": { "str": "Temperature Tolerance" },
+    "points": 5,
+    "valid": true,
+    "description": "You are now not at all bothered by the heat and it is harder for you to overheat or freeze at all.  When you do though, it'll hit just as hard as it did before.",
+    "prereqs": [ "RESISTWARM" ],
+    "types": [ "ACCLIMATIZATION" ],
+    "category": [ "PLANT" ],
+    "threshreq": [ "THRESH_PLANT" ],
+    "enchantments": [
+      { "condition": "ALWAYS", "values": [ { "value": "CLIMATE_CONTROL_CHILL", "add": 25 } ] },
+      { "condition": "ALWAYS", "values": [ { "value": "CLIMATE_CONTROL_HEAT", "add": 25 } ] }
+    ]
+  },
+  {
+    "type": "mutation",
     "id": "VANITY",
     "name": { "str": "Highly Vain" },
     "points": -1,
@@ -9276,5 +9293,16 @@
     "prereqs": [ "INT_ALPHA", "PER_ALPHA" ],
     "prereqs2": [ "STR_ALPHA", "DEX_ALPHA" ],
     "threshreq": [ "THRESH_ALPHA" ]
+  },
+  {
+    "type": "mutation",
+    "id": "NOT_GLASS",
+    "name": { "str": "Comfortably Fluid" },
+    "player_display": true,
+    "points": 1,
+    "description": "You can hear your heartbeat in your ears, feel the blood sloshing around in your veins.  The uneven hitches in your breath, the aches in your joints, the rumbling of your stomach.  It's nasty and messy and ugly.  And you are extremely grateful for that.",
+    "starting_trait": false,
+    "valid": false,
+    "passive_mods": { "dex_mod": 1 }
   }
 ]

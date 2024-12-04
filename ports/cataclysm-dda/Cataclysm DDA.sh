@@ -1,4 +1,5 @@
 #!/bin/bash
+# PORTMASTER: cataclysm-dda.zip, Cataclysm DDA.sh
 
 XDG_DATA_HOME=${XDG_DATA_HOME:-$HOME/.local/share}
 
@@ -31,7 +32,7 @@ cd $GAMEDIR
 
 
 $ESUDO chmod 666 /dev/uinput
-$GPTOKEYB "cataclysm-tiles" -c "cataclysm.gptk" &
+$GPTOKEYB "cataclysm-tiles" -c "cataclysm.gptk" textinput &
 ./cataclysm-tiles 2>&1 | tee $GAMEDIR/log.txt
 
 $ESUDO kill -9 $(pidof gptokeyb)

@@ -15,7 +15,7 @@
     "traits": [
       { "trait": "SPIRITUAL" },
       { "trait": "EAGLEEYED" },
-      { "trait": "hair_brown_long" },
+      { "trait": "hair_long", "variant": "brown" },
       { "trait": "NO_BASH" },
       { "trait": "RETURN_TO_START_POS" }
     ],
@@ -92,7 +92,7 @@
       { "trait": "PRETTY" },
       { "trait": "PACIFIST" },
       { "group": "NPC_starting_traits" },
-      { "trait": "hair_blond_long" },
+      { "trait": "hair_long", "variant": "blond" },
       { "trait": "NO_BASH" },
       { "trait": "RETURN_TO_START_POS" }
     ],
@@ -436,7 +436,7 @@
       { "trait": "FLIMSY" },
       { "trait": "ANIMALEMPATH" },
       { "trait": "HYPEROPIC" },
-      { "trait": "hair_white_long" },
+      { "trait": "hair_long", "variant": "white" },
       { "trait": "NO_BASH" },
       { "trait": "RETURN_TO_START_POS" }
     ],
@@ -571,6 +571,7 @@
     "name": { "str": "Trader" },
     "job_description": "I'm collecting gear and selling it at a high interest.",
     "traits": [ { "group": "BG_survival_story_EVACUEE" }, { "group": "NPC_starting_traits" }, { "group": "Appearance_demographics" } ],
+    "common": false,
     "shopkeeper_item_group": [ { "group": "NC_EVAC_SHOPKEEP_misc", "rigid": true } ],
     "shopkeeper_price_rules": [
       { "item": "icon", "price": 100 },
@@ -1025,7 +1026,7 @@
     "items": [
       { "item": "rebreather", "prob": 3, "ammo-item": "rebreather_cartridge_o2" },
       { "item": "UPS_off", "prob": 5, "charges": [ 0, 1000 ] },
-      { "item": "misc_repairkit", "prob": 20, "charges-min": 25 },
+      { "item": "misc_repairkit", "prob": 20 },
       { "item": "bbgun", "prob": 15, "charges-min": 100 },
       { "item": "bb", "prob": 10, "charges-min": 100 },
       { "item": "tailors_kit", "prob": 15, "charges-min": 0 },
@@ -1137,7 +1138,7 @@
     "entries": [
       { "item": "screwdriver" },
       { "item": "duct_tape" },
-      { "item": "medium_battery_cell", "ammo-item": "battery", "charges": 500, "container-item": "welder" },
+      { "item": "welder" },
       { "item": "goggles_welding" },
       { "item": "solar_cell" }
     ]

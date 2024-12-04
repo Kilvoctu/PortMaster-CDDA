@@ -34,8 +34,8 @@
     "id": "MISSION_GET_INHALER",
     "type": "mission_definition",
     "name": { "str": "Find Inhaler" },
-    "goal": "MGOAL_FIND_ITEM",
-    "item": "inhaler",
+    "goal": "MGOAL_CONDITION",
+    "goal_condition": { "u_has_item": "inhaler" },
     "difficulty": 2,
     "value": 150000,
     "urgent": true,
@@ -96,7 +96,21 @@
       ]
     },
     "end": {
-      "effect": [ { "npc_lose_effect": "infection" }, "stop_guard", { "set_npc_rule": "investigate_noises" }, "npc_thankful" ]
+      "effect": [
+        { "npc_lose_effect": "infection" },
+        "stop_guard",
+        { "set_npc_rule": "investigate_noises" },
+        "npc_thankful",
+        {
+          "if": { "u_has_item": "antibiotics" },
+          "then": { "u_consume_item": "antibiotics", "popup": true },
+          "else": {
+            "if": { "u_has_item": "strong_antibiotic" },
+            "then": { "u_consume_item": "strong_antibiotic", "popup": true },
+            "else": { "u_consume_item": "panacea", "popup": true }
+          }
+        }
+      ]
     },
     "fail": { "effect": "npc_die" }
   },
@@ -331,11 +345,7 @@
       "effect": [
         "stop_following",
         {
-          "weighted_list_eocs": [
-            [ { "id": "get_katana" }, { "const": 5 } ],
-            [ { "id": "get_deagle_44" }, { "const": 10 } ],
-            [ { "id": "get_m4_carbine" }, { "const": 6 } ]
-          ]
+          "weighted_list_eocs": [ [ { "id": "get_katana" }, 5 ], [ { "id": "get_deagle_44" }, 10 ], [ { "id": "get_m4_carbine" }, 6 ] ]
         }
       ]
     },
@@ -583,8 +593,18 @@
     "difficulty": 5,
     "value": 120000,
     "urgent": true,
-    "place": "near_town",
-    "start": "place_zombie_mom",
+    "start": {
+      "assign_mission_target": {
+        "om_terrain": "house",
+        "om_terrain_match_type": "PREFIX",
+        "reveal_radius": 1,
+        "random": true,
+        "search_range": 60,
+        "min_distance": 5,
+        "z": 0
+      },
+      "update_mapgen": { "place_monster": [ { "monster": "mon_zombie", "x": 12, "y": 12, "target": true, "random_name": "female" } ] }
+    },
     "end": { "effect": "npc_thankful" },
     "origins": [ "ORIGIN_OPENER_NPC", "ORIGIN_ANY_NPC" ],
     "dialogue": {
@@ -904,7 +924,7 @@
       "offer": "I'm so <swear> infuriated!  I've got an enemy that ruined my life, and now I want to get revenge!  I don't care about <the_cataclysm>, I just want to burn his house!  Would you help me, <name_g>?",
       "accepted": "Good.  Let's go to his house and <swear> burn it down!  Oh, by the way, could you bring gasoline with you, <name_g>?  I was so angry I forgot to bring it with me…",
       "rejected": "Seriously?  It's such an easy job…",
-      "advice": "Maybe we can find some gasoline at gas station.",
+      "advice": "Maybe we can find some gasoline at a gas station.",
       "inquire": "Are you ready, <name_g>?",
       "success": "Sweet, sweet revenge!  Ah, smells so nice!  Feels like the smell of napalm in the morning!  All his stuff, and probably even that <name_b>, will burn to ashes in a matter of minutes.  You helped me get my revenge, so I'll follow you to the end, <name_g>!",
       "success_lie": "What?!  You liar!",
@@ -993,7 +1013,7 @@
     "id": "EOC_FACTION_SUCCESSION_COOLDOWN",
     "eoc_type": "EVENT",
     "required_event": "game_begin",
-    "effect": [ { "math": [ "time_between_succession", "=", "u_val('time: 90 d')" ] } ]
+    "effect": [ { "math": [ "time_between_succession", "=", "u_val('time: 3 d')" ] } ]
   },
   {
     "type": "effect_on_condition",
@@ -1001,7 +1021,13 @@
     "eoc_type": "EVENT",
     "required_event": "broken_bone",
     "//1": "Only run EOC if character is currently on succession cooldown!",
-    "condition": { "math": [ "u_val('time_since_var', 'var_name: timer_time_of_last_succession')", "<", "time_between_succession" ] },
+    "condition": {
+      "compare_num": [
+        { "u_val": "time_since_var", "var_name": "time_of_last_succession", "type": "timer" },
+        "<",
+        { "global_val": "var", "var_name": "time_between_succession" }
+      ]
+    },
     "//2": "Remove the mission tracking that you can't change char, push the timer back by [cooldown length] so changing is immediately available.",
     "effect": [
       { "remove_active_mission": "MISSION_CAMP_LEADERSHIP_CHANGE" },
