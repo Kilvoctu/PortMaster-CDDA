@@ -9,7 +9,7 @@ x = e # examine, pick up, insert
 y = d # inventory, drop, unload
 
 a_hk = 7 # flexible key
-y_hk = add_shift
+a_hk = add_shift
 b_hk = \ # flexible key
 x_hk = / # filter list
 y_hk = 8 # flexible key
