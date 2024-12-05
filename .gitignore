@@ -2,6 +2,8 @@
 .DS_Store
 ._*
 
+Thumbs.db
+
 # Special file, ignore it. :)
 .github_check
 .hash_cache
