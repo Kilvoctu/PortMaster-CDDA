@@ -2,6 +2,9 @@
 .DS_Store
 ._*
 
+# These get generated and don't need to exist
+Thumbs.db
+
 # Special file, ignore it. :)
 .github_check
 .hash_cache

@@ -8,11 +8,11 @@ b = esc
 x = e # examine, pick up, insert
 y = d # inventory, drop, unload
 
-a_hk = 7 # flexible key
+a_hk = 7 # butcher
 a_hk = add_shift
-b_hk = \ # flexible key
-x_hk = / # filter list
-y_hk = 8 # flexible key
+b_hk = \ # ignore enemy
+x_hk = / # list items, filter list
+y_hk = 8 # unload item
 y_hk = add_shift
 
 l1 = leftshift # modifier key 1
@@ -22,12 +22,12 @@ r1 = f # fire, reload, throw item
 r2 = g # use wielded item, wield, toggle item attack mode
 r3 = r # smash, grab, haul
 
-r1_hk = / # keybinds screen
-r1_hk = add_shift
-l1_hk = - # minus
-l2_hk = = # plus
-l2_hk = add_shift
-r2_hk = = # equals
+l1_hk = / # keybinds
+l1_hk = add_shift
+l2_hk = = # equals
+r1_hk = - # minus
+r2_hk = = # plus
+r2_hk = add_shift
 
 up = up 
 up = repeat
@@ -49,5 +49,5 @@ right_analog_left = y # tab left, movement mode, take off item, disassemble
 right_analog_right = z # tab right, attack, wear item, craft item
 
 deadzone_mode = axial
-deadzone = 5000 # Reasonable deadzone I think
+deadzone = 30000 # high because stick usage isn't analog in game
 
