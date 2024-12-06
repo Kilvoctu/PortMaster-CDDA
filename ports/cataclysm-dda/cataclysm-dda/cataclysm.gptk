@@ -8,11 +8,11 @@ b = esc
 x = e # examine, pick up, insert
 y = d # inventory, drop, unload
 
-a_hk = 7 # flexible key (&)
+a_hk = 7 # butcher
 a_hk = add_shift
-b_hk = \ # flexible key
-x_hk = / # filter list
-y_hk = 8 # flexible key (*)
+b_hk = \ # ignore enemy
+x_hk = / # list items, filter list
+y_hk = 8 # unload item
 y_hk = add_shift
 
 l1 = leftshift # modifier key 1
@@ -50,4 +50,3 @@ right_analog_right = z # tab right, attack, wear item, craft item
 
 deadzone_mode = axial
 deadzone = 30000 # high because stick usage isn't analog in game
-
