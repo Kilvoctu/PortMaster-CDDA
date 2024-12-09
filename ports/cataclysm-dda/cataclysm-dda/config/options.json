@@ -1,5 +1,5 @@
 [
-  { "info": "Set a default character name that will be used instead of a random name on character creation.", "default": "Default: ", "name": "DEF_CHAR_NAME", "value": "Mio" },
+  { "info": "Set a default character name that will be used instead of a random name on character creation.", "default": "Default: ", "name": "DEF_CHAR_NAME", "value": "" },
   { "info": "If true, enable item auto pickup.  Change pickup rules with the Auto pickup manager.", "default": "Default: False", "name": "AUTO_PICKUP", "value": "true" },
   { "info": "If true, enable auto pickup items one tile around to the player.  You can assign No Auto Pickup zones with the Zones manager for e.g. your homebase.", "default": "Default: False", "name": "AUTO_PICKUP_ADJACENT", "value": "false" },
   { "info": "If true, items that belong to your faction will be included in auto pickup.", "default": "Default: False", "name": "AUTO_PICKUP_OWNED", "value": "false" },

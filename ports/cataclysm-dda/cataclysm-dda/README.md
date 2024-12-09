@@ -1,7 +1,8 @@
 ## Notes
 
 Thanks to the [Cataclysm DDA Team](https://github.com/CleverRaven/Cataclysm-DDA) for creating such an awesome game and making it available for free.
-This is based on the Experimental 2024-11-30-1704 build, available [here.](https://github.com/CleverRaven/Cataclysm-DDA/releases/tag/cdda-experimental-2024-11-30-1704)
+
+This unofficial version, maintained by [Kilvoctu](https://github.com/Kilvoctu), is forked from Experimental releases and further developed for PortMaster.
 
 ## Controls
 
@@ -54,8 +55,7 @@ This is based on the Experimental 2024-11-30-1704 build, available [here.](https
 ## Compile
 
 ```shell
-git clone https://github.com/CleverRaven/Cataclysm-DDA.git
+git clone --depth 1 --branch Tu-c https://github.com/Kilvoctu/Cataclysm-DDA.git
 cd Cataclysm-DDA
-git reset --hard f3eb0580cbb3aa60a34fa3fcc5c9b1a4eff2019d
 make TILES=1 SOUND=1 RELEASE=1 LOCALIZE=1 LANGUAGES=all
 ```
