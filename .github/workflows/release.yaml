@@ -17,7 +17,7 @@ jobs:
           fetch-depth: 1
 
       - name: Unzip Archive
-        uses: hoatruongdev09/extract-zip@1.2
+        uses: hoatruongdev09/extract-zip@1.0.0
         with:
           input-path: release/cdda.zip
           output-path: ports/cataclysm-dda/cataclysm-dda
