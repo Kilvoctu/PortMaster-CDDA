@@ -19,4 +19,4 @@ jobs:
       - name: Unzip Archive
         uses: TonyBogdanov/zip@1.0
         with:
-            args: unzip -qq ./release/data.zip -d ./ports/cataclysm-dda/cataclysm-dda
+            args: unzip -qq ./releases/data.zip -d ./ports/cataclysm-dda/cataclysm-dda
