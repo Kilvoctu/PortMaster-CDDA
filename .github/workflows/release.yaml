@@ -21,3 +21,15 @@ jobs:
         with:
           file_path: releases/data.zip
           extract_dir: ports/cataclysm-dda/cataclysm-dda
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: New data
+          committer: github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
+          author: ${{ github.actor }} <${{ github.actor_id }}+${{ github.actor }}@users.noreply.github.
+          body: |
+            New data
+          title: 'Test'
+          labels: automated pr
+          branch: example-patches
