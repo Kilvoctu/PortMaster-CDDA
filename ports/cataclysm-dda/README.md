@@ -7,7 +7,8 @@ This is based on the 0.H-RELEASE Herbert build, available [here.](https://catacl
 
 | Button | Action |
 |--|--| 
-|Select+L1|See the button bindings at any point in-game|
+|Select+L1|Show Buttons Binds|
+|Hotkey|Skip Error / Show Button Binds|
 |Dpad|Movement|
 |L1/L2+Dpad|Diagonal Movement|
 |A|Confirm / Action Menu|

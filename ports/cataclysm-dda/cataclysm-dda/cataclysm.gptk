@@ -1,4 +1,4 @@
-guide = i # keybind screen
+guide = i # keybind screen, skip errors
 
 back = p # Time passing functions
 start = m # Map, player info, message log
