@@ -1,4 +1,4 @@
-name: Pull Request Check
+name: Pull Request
 
 on:
   workflow_dispatch:
@@ -24,10 +24,3 @@ jobs:
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v5
-        with:
-          commit-message: New data
-          body: |
-            New data
-          title: 'Test'
-          labels: automated pr
-          branch: example-patches
