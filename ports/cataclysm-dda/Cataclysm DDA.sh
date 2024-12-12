@@ -27,12 +27,14 @@ mkdir -p "$GAMEDIR/conf"
 export XDG_CONFIG_HOME="$CONFDIR"
 export XDG_DATA_HOME="$CONFDIR"
 export SDL_GAMECONTROLLERCONFIG="$sdl_controllerconfig"
+export TEXTINPUTINTERACTIVE="Y"
+export TEXTINPUTNOAUTOCAPITALS="Y"
 
 cd $GAMEDIR
 
 
 $ESUDO chmod 666 /dev/uinput
-$GPTOKEYB "cataclysm-tiles" -c "cataclysm.gptk" textinput &
+$GPTOKEYB "cataclysm-tiles" -c "cataclysm.gptk" &
 ./cataclysm-tiles 2>&1 | tee $GAMEDIR/log.txt
 
 $ESUDO kill -9 $(pidof gptokeyb)
