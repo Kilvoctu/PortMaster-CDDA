@@ -16,7 +16,8 @@ jobs:
             releases
           fetch-depth: 1
 
-      - name: Unzip Archive
-        uses: TonyBogdanov/zip@1.0
+      - name: Extract
+        uses: ihiroky/extract-action@v1
         with:
-            args: unzip -qq ./releases/data.zip -d ./ports/cataclysm-dda/cataclysm-dda
+          file_path: releases/data.zip
+          extract_dir: ports/cataclysm-dda/cataclysm-dda
