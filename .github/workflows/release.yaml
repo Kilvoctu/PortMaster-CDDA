@@ -2,6 +2,10 @@ name: PortMaster Release
 
 on:
   workflow_dispatch:
+    inputs:
+        branch:
+          required: true
+          type: string
 
 jobs:
   build:
@@ -11,7 +15,7 @@ jobs:
       - name: Checkout Branch
         uses: actions/checkout@v4
         with:
-          ref: Experimental
+          ref: ${{ inputs.branch }}
           sparse-checkout: |
             releases
             ports/cataclysm-dda/cataclysm-dda
@@ -27,7 +31,7 @@ jobs:
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v7
         with:
-          base: Experimental
+          base: ${{ inputs.branch }}
           title: Update Binary
           add-paths: |
             ports/cataclysm-dda/cataclysm-dda
