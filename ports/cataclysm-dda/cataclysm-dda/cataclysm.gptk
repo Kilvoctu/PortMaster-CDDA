@@ -1,4 +1,4 @@
-guide = i # Help screen, ignore errors if occurs
+guide = f1 # Help screen
 
 back = p # Time passing functions
 start = m # Map, player info, message log
