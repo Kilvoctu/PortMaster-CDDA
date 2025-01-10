@@ -1,4 +1,4 @@
-guide = i # keybind screen, skip errors
+guide = f1 # Help screen
 
 back = p # Time passing functions
 start = m # Map, player info, message log
@@ -49,4 +49,4 @@ right_analog_left = y # tab left, movement mode, take off item, disassemble
 right_analog_right = z # tab right, attack, wear item, craft item
 
 deadzone_mode = axial
-deadzone = 10000
+deadzone = 30000 # high because stick usage isn't analog in game
