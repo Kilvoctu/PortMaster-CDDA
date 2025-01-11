@@ -3,6 +3,8 @@
 Thanks to the [Cataclysm DDA Team](https://github.com/CleverRaven/Cataclysm-DDA) for creating such an awesome game and making it available for free.
 This is based on the 0.H-RELEASE Herbert build, available [here.](https://cataclysmdda.org/releases/)
 
+The game launches to a black screen. Press any button to clear the screen and load up the main menu.
+
 ## Controls
 
 | Button | Action |
