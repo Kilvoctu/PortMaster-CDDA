@@ -631,7 +631,7 @@
         "move_cost": 150,
         "cooldown": 2,
         "gun_type": "mossberg_930",
-        "ammo_type": "shot",
+        "ammo_type": "shot_beanbag",
         "fake_skills": [ [ "gun", 2 ], [ "shotgun", 2 ] ],
         "fake_dex": 9,
         "no_ammo_sound": "click click!",
@@ -772,14 +772,12 @@
     "speed": 150,
     "color": "pink",
     "extend": { "flags": [ "FIREPROOF" ] },
-    "starting_ammo": { "plasma": 100 },
     "special_attacks": [
       {
         "type": "gun",
         "cooldown": 1,
         "gun_type": "irradiant_gun",
         "move_cost": 100,
-        "ammo_type": "plasma",
         "fake_skills": [ [ "gun", 10 ], [ "rifle", 5 ] ],
         "fake_dex": 10,
         "ranges": [ [ 0, 40, "DEFAULT" ] ],
@@ -1074,5 +1072,34 @@
     "color": "light_gray",
     "flags": [ "TRADER_AVOID", "NO_REPAIR", "LEAK_DAM", "RADIOACTIVE" ],
     "melee_damage": { "bash": 7 }
+  },
+  {
+    "id": "mon_uica_irradiant",
+    "type": "MONSTER",
+    "copy-from": "mon_wraitheon_irradiant",
+    "name": "UICA Irradiant",
+    "default_faction": "UICA_mil",
+    "aggression": 0,
+    "aggro_character": false,
+    "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ]
+  },
+  {
+    "id": "mon_uica_tankbot",
+    "type": "MONSTER",
+    "copy-from": "mon_tankbot",
+    "name": { "str": "UICA Regulator" },
+    "default_faction": "UICA_mil",
+    "aggression": 0,
+    "aggro_character": false,
+    "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ]
+  },
+  {
+    "id": "mon_uica_milbot_556",
+    "type": "MONSTER",
+    "copy-from": "mon_milbot_556",
+    "name": "UICA Imaginifer",
+    "aggression": 0,
+    "aggro_character": false,
+    "anger_triggers": [ "FRIEND_ATTACKED", "FRIEND_DIED", "HURT" ]
   }
 ]
